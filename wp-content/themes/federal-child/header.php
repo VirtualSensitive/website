@@ -105,12 +105,13 @@ global $Rb_demo;
 									<?php
 									if ( has_nav_menu( 'headermenu' ) ){
 										wp_nav_menu(array(
-										   'theme_location' => 'headermenu',
-										   'echo' => true,
-										   'container' => '',
-										   'menu_class' => 'nav navbar-nav',
-										   'walker'=> new Description_Walker,
-										   'depth' => 4) );
+											'theme_location' => 'headermenu',
+											'echo' => true,
+											'container' => '',
+											'menu_class' => 'nav navbar-nav',
+											'walker'=> new Description_Walker,
+											'depth' => 4
+										));
 									}
 									?>
 								</nav>
@@ -120,6 +121,11 @@ global $Rb_demo;
 				</article>
 			</section>
 
-			<section id='page-container'>
-				<aside id='page-round-container-left'></aside>
-				<section id='page-round-content'>
+			<section id='page-wrapper'>
+				<div id='page-container'>
+					<svg id='page-round-container-left' viewBox='0 0 712 1000'>
+						<path class='mask' d='M0,0 H712 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000 H0 V0 Z' />
+						<path class='border' d='M712,0 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000' />
+						<path class='header-background' d='M0,0 H712 C634.1,26,563.2,67,503,120 H0 V0 Z' />
+					</svg>
+					<div id='page-round-content'>

@@ -14,4 +14,4 @@ You can add your custom styles to this css file. This Theme uses style.php file 
 /* Import parent theme stylesheet */
 @import url('../federal/style.css');
 
-@import url('./federal-child.css')
+@import url('./css/federal-child.css')
