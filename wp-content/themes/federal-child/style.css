@@ -1,0 +1,17 @@
+/*
+Theme Name: Federal-child
+Theme URI: http://mythemes.renklibeyaz.com/federalwp/
+Description: One Page Premium WordPress Theme
+Author: Florent Schildknecht
+Author URI: http://florentschildknecht.com/
+Version: 1.0.0
+Tags: One Page, Parallax, WooCommerce
+License:
+License URI:
+You can add your custom styles to this css file. This Theme uses style.php file for dynamic styles.
+*/
+
+/* Import parent theme stylesheet */
+@import url('../federal/style.css');
+
+@import url('./federal-child.css')

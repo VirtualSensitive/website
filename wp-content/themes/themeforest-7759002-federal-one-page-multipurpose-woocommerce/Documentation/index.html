@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Federal Theme Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="RenkliBeyaz">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    </head>
+    
+<body data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container"> 
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+	<a class="brand" href="#">Federal  One Page</a> <!-- TIP: Change this for the name of your file -->
+     	<div class="nav-collapse">
+        <ul class="nav">
+              <li><a href="#top" class="active">Top</a></li>
+              <li><a href="#installation">Installation</a></li>
+              <li><a href="#pages">Pages</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#themesettings">Settings</a></li>
+              <li><a href="#translation" >Translation</a></li>
+        </ul>
+</div>
+	</div>
+		</div>
+			</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->			
+			
+<div class="container">
+    
+	<div class="masthead">
+      <h1>Federal Theme Help Documentation</h1>
+	    <p class="marketing-byline"> This is the WordPress theme documentation published &hearts; by <a href="http://themeforest.net/user/RenkliBeyaz" target="_blank"> RenkliBeyaz</a> </p>
+	    <p>This help documentation was prepared for installation, general knowledge and <br>
+	    &quot;how to directions&quot; for your new theme.</p>
+	</div> <!-- masthead -->
+	
+   <div id="intro">
+    <p class="highlight hero-unit">First of all thank you for buying our theme. We tried to clarify everything that you need to know but if you have further questions please register our &quot;member only&quot; forum <a target="_blank" href="http://renklibeyaz.com/forum">here</a>. Thank you<br>
+    </p>
+	 <p class="download-info"> <a  target="_blank" href="http://renklibeyaz.com/forum/purchase_code.html" class="btn btn-primary btn-large">Where can i find my Purchase Code ?</a> <a target="_blank" href="http://renklibeyaz.com/forum/register.php" class="btn btn-large">How to register support forum ?</a> </p>
+  </div> <!-- intro -->
+  
+<hr/>
+ 
+<section id="installation">
+	<div class="page-header">
+	  <h1>Installation <small>New theme installation</small></h1>
+	</div>
+	
+    <div class="alert"> 
+		<a class="close" data-dismiss="alert">×</a> <strong>Attention!</strong> You need to have a running WordPress before you install your theme. If you don't have any installed WordPress, please follow this link <a href="http://codex.wordpress.org/Installing_WordPress">http://codex.wordpress.org/Installing_WordPress</a>
+	</div>
+
+    <p>You need to start your installation by uploading your theme. Then you need to activate it. 
+    There are 2 ways of uploading a theme. Uploading over WordPress engine or Using an FTP software.</p>
+    <h3>Video Installation and dummy content import</h3>
+   
+   <iframe width="100%" height="480" src="http://www.youtube.com/embed/OeKj09EmcLo" frameborder="0" allowfullscreen></iframe>
+
+    <hr />
+	
+	<div class="row">
+		<div class="span6">
+			<h3>WordPress Upload</h3>
+			<p>In your control panel, go to <code> Apperance &gt; Add New Themes &gt; Upload </code> page. Click to<code>Browse</code> and choose the zip file inside from your theme folder.Then click to <code>Install Now</code> to finis installation.</p>
+			<div class="alert"> 
+			<a class="close" data-dismiss="alert">×</a> <strong>Attention!</strong> If you get a message like &quot;Your upload limit is not enough&quot;, please contact your host provider or switch to FTP upload.</div>
+		</div>
+
+		<div class="span6">
+			<h3>FTP Upload</h3>
+			<p>You need to unzip your theme files before uploading it by an FTP software. Then you need to upload your files to <code>/wp-content/themes/</code></p>
+		</div>
+		
+		<div class="span12">
+		<p>Then you need to activate your theme from  <code>Apperance &gt; Themes</code> page.</p>
+		</div>
+		
+	</div>
+	<hr />
+	<hr />
+
+
+	<div class="row">
+		<div class="span12">
+			<h3>Customizing the Menu</h3>
+	    <p> From <code>Apperance &gt; Menus</code> page, create a menu and give it a name. Then you need to check its name from <code>Header Navigation</code> , it will be assigned.</div>
+	</div>
+	
+	
+	<hr />
+
+
+	<div class="row">
+		<div class="span12">
+		  <h3>Assigning a Home Page</h3>
+			<p>You should set ON <code>RB Admin &gt; GENERAL SETTINGS &gt; Enable to use a Front Page</code>. 
+			And then you need to create a page before you assign a Home Page. 
+			To create a new page go to<code>Pages &gt; Add New</code>. You may give a name like "Home".	
+			Then click to <code>Publish</code> and your page will be published.<br>
+		    </p>
+			<p> <code>Settings &gt; Reading</code> / "Front Page Displays" area / check <code>A static page (select below)</code> and  select the page that we named as &quot;Home&quot; from listed at <code>Front page:</code><br>
+		  </p>
+<div class="alert alert-info"><strong>Info:</strong> If you want your pages looks like our Demo pages, you can find <code>demo_content.xml</code> from your downloaded folder. 
+	Then you need to import it from WordPress. </div>
+		</div>
+	</div>
+</section> <!-- Installation -->
+      
+
+<section id="pages">
+	<div class="page-header">
+		<h1>Creating a Parallax One Page<small> Customize Your Pages</small></h1>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<p>You can start creating a page by <code>Pages &gt; Add New Page</code> .		    
+			Adding your title <code>HOME</code> and content<br><code>   [rb_single_page]<br>
+			[rb_page slug="how-we-works" type="boxed"]<br>
+			[rb_page slug="4-reasons" type="boxedfullbgparallax" bgimage="http://mythemes.renklibeyaz.com/federalwp/wp-content/uploads/2014/04/rim.jpg"]<br>
+			[rb_page slug="our-dedicated-team" type="boxed"]<br>
+			[rb_page slug="testimonials" type="boxedfullbgparallax" parallaxspeed=".2" bgimage="http://mythemes.renklibeyaz.com/federalwp/wp-content/uploads/2014/04/testi.jpg"]<br>
+			[rb_page slug="our-services" type="boxed"]<br>
+			[rb_page slug="our-skills" type="boxedfullbgparallax" bgimage="http://mythemes.renklibeyaz.com/federalwp/wp-content/uploads/2014/04/ourskill.jpg"]<br>
+			[rb_page slug="our-portfolio" type="fullwidth"]<br>
+			[rb_page slug="twitter-feeds" type="boxedfullbgparallax" parallaxspeed=".3" bgimage="http://mythemes.renklibeyaz.com/federalwp/wp-content/uploads/2014/04/31.jpg"]<br>
+			[rb_page slug="clients-brands" type="boxed"]<br>
+			[/rb_single_page]</code>  and  click to <code>Publish</code> then your page will be published.  Also you can create this page with RB Shortcode Generator.</p>
+			<p>&nbsp;</p>
+			<p><br>
+           <center> 
+             <p><img src="assets/img/create_home_page.png"/></p>
+             <p><br>
+             </p>
+           </center>
+			To see your page at your menu , you need to add your page to menu from <code>Apperance &gt; Menus</code> page.<br>
+			  <br>
+			</p>
+			<div class="alert alert-info"><strong>Info: </strong>You can find demo_contemt.xml  file (in downloaded file) and by importing it to WordPress you can have a main page and contact page designs like our demo pages.			</div>
+		</div>
+	</div>
+</section><!-- Pages -->
+      
+<section id="portfolio">
+	<div class="page-header">
+	  <h1>Portfolio <small> Publish your Works</small></h1>
+	</div>
+	<div class="row">
+		<div class="span3">
+		<h3>Adding portfolio Items</h3>
+			<p></p>
+		</div>
+		<div class="span9">
+			<p>You can start adding new items to your portfolio by using <code>Portfolios &gt; Add New Portfolio Item</code> button. <br>
+			  <br>
+			  But you must to seperate your portfolio into different categories or 
+            want to create multiple portfolio pages you can add your categories from <code>Portfolios &gt; Portfolio Categories</code> page. </p>
+			<p>First of all give your title and then under <code>Format</code> section (which is at the right part of the page) you must select the type "Images" or "Video" then click to Publish. This process will show chosen format.</p>
+	  </div>
+	</div>
+	<hr />
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Additional Settings(General)</h3>
+			<p>Genaral additional settings were special areas that created for portfolio items and accessible from all formats.</p>
+		</div>
+		<div class="span9">
+			<h4>Select a Crop Position Selection</h4>
+			<p>If you use Image Resizer Script, this script will cut tour images by centering. <br>
+			  If you want your images cut positioned by like Right Top, Left Bottom, you can choose from this selection.<br>
+			</p>
+		</div>
+	</div>
+	<hr />
+
+	<div class="row">
+		<div class="span3">
+			<h3>Image Format</h3>
+			<p>Image format for Portfolio <br>
+			</p>
+		</div>
+		<div class="span9">
+			<p>When you select this format <code>Featured Image</code> will be shown as thumbnail.</p>
+			<h4>Lager Image URL (Text Box)</h3>
+			<p>You can specify your larger image's URL here by manually.<br>
+			  If you want, click to <code>Browse</code> and Upload your images to WordPress Media Library or you can choose images from the Library.<br>
+			</p>
+		</div>
+	</div>
+	<hr />
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Video Format</h3>
+			<p>Video format for Portfolio</p>
+		</div>
+		<div class="span9">
+			<p>If you choose that format <code>Featured Image</code> will be shown as thumbnail.</p>
+			<h4>Video URL (Text Box)</h3>
+			<p>You must use this area with this format. You can give the direct URL of Youtube or Vimeo like <code>http://youtu.be/ocQ10JadgIs</code> / <code>http://vimeo.com/12643755</code>.</p>
+			<p>Script will automatically recognise video site. If you want to use your self hosted video you just need to give its URL.</p>
+		  <div class="alert alert-info">
+		    <p><strong>Info: </strong> 
+			We suggest you to use <strong>mp4</strong> format which have <span id="result_box" lang="en">widespread support</span> because of Ipad and Iphone don't support every video format.		  </p>
+		  </div>
+			<h4>Video Height and Width (Text Box)</h3>
+		    <p>These 2 fields must be filled. It needs to be integer. It is important because it calculates the width and height proportion.</p>
+</div>
+	</div>
+	<hr />
+	
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Preparing a Portfolio Page</h3>
+			<p>You can use shortcodes instead of page templates for Portfolio, Blog or Gallery. It is much more flexible.</p>
+		</div>
+		<div class="span9">
+		  <p>Create a page and use <code>[rb_portfolio cats="" imagewidth="475" imageheight="350" type="filter"]</code> shortcode inside, its that simple to show your portfolio items in a single page. You can use Shortcode builder for to create this shortcode.		  </p>
+		  <h4>Creating Multiple Portfolio</h4>
+			<p>If you want to use multiple portfolio or if you want to show some categories, you can use<code>[rb_portfolio cats=&quot;1,2,3&quot; imagewidth=&quot;420&quot; imageheight=&quot;240&quot; type=&quot;filter&quot;]</code>shortcode. You need to seperate category ids with comma.</p>
+	  </div>
+	</div>
+	<hr />	
+	
+	
+</section><!-- Portfolio -->
+
+
+
+<section id="blog">
+	<div class="page-header">
+	  <h1>Blog <small> Publish your articles</small></h1>
+	</div>
+	<div class="row">
+		<div class="span3">
+			<h3>Adding an Article</h3>
+			<p></p>
+		</div>
+	  <div class="span9">
+		<p>You can start adding you articles with <code>Posts &gt; Add New</code> button.</p>
+		<p>If you want to categorize your articles or if you want to use multiple blog pages you can use <code>Posts &gt; Categories</code>button.</p>
+		<p>When you add your portfolio, give a title and then choose a type ("Standart", "Aside", "Audio", "Gallery", "Image", "Link", "Quotes" or "Video") from <code>Format</code> area  at the right side of the page then click to <code>Publish</code>. This process will show the chosen format settings.		</p>
+	  </div>
+	</div>
+	<hr />
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Additional Settings (General)</h3>
+			<p>Genaral additional settings were special areas that created for blog items and accessible from all formats.		</p>
+		</div>
+		<div class="span9">
+		  <p>
+		    <h4>
+		    Show in Detail Page  (Checkbox)</h3>
+		  </p>
+		  <p>If you check this box, while blog detail page is shown, chosen format will be displayed as the first item of shown page according to selected media.</p>
+			<p>when you see blog detail page, chosen media will be shown as the first item of the detail page according to chosen format.	  </p>
+	  </div>
+	</div>
+	<hr />
+
+	<div class="row">
+		<div class="span3">
+			<h3>Standart Format</h3>
+			<p>Standart format for blog posts</p>
+		</div>
+		<div class="span9">
+			<p>When you choose that format, if you assign <code>Featured Image</code> , it will be used as introduction image.</p>
+		</div>
+	</div>
+	<hr />
+	
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Aside Format</h3>
+			<p>Aside format for blog posts</p>
+		</div>
+		<div class="span9">
+			<p>This format doesn't include title and introduction image except from the text. </p>
+		</div>
+	</div>
+	<hr />
+	<hr />
+	
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Image Format</h3>
+			<p>Image format for blog posts</p>
+		</div>
+		<div class="span9">
+			<p>If you choose this format <code>Featured Image</code> will be introduction image. And Larger image will be shown in Lighbox.</p>
+			<p>Lager Image URL (Text Box)</h3>
+			</p>
+			<p>You can give your larger image's URL manually. Or if you want you can click to <code>Browse</code> button and then you can upload your images to WordPress Media Library or you can choose from Library images.		</p>
+		</div>
+	</div>
+	<hr />
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Video Format</h3>
+			<p>Video format for Blog Post</p>
+		</div>
+		<div class="span9">
+			<h4>Video URL (Text Box)</h3>
+			<p>This area must be used with this format. You can give your Youtube or Vimeo URL <code>http://youtu.be/ocQ10JadgIs</code> / <code>http://vimeo.com/12643755</code>Script will automatically recognise video site. If you want to use your self hosted video you just need to give its URL.</p>
+<div class="alert alert-info"><strong>Info: </strong> We suggest you to use <strong>mp4</strong> format which have <span id="result_box2" lang="en">widespread support</span> because of Ipad and Iphone don't support every video format. </div>
+			<h4>Video Height(Text Box)</h3>
+			<p>This field must be filled. It must be integer. Video files will be %100 in width and entered height values will be used.	  </p>
+	  </div>
+	</div>
+	<hr />
+	
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Audio Format</h3>
+			<p>Audio format for Blog post.</p>
+		</div>
+		<div class="span9">
+			<h4>Audio URL (Text Box)</h3>
+			<p>This area must be used with this format.  You need to give your self hosted audio's URL. Player supports .aac, .m4a, .f4a, .ogg, .oga ve .mp3 formats.</p>
+			<div class="alert alert-info"><strong>Info: </strong> We suggest you to use <strong>mp4</strong> format which have <span id="result_box3" lang="en">widespread support</span> because of Ipad and Iphone don't support every video format. </div>
+		</div>
+	</div>
+	<hr />
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Gallery Format</h3>
+			<p>Gallery format for blog post.</p>
+		</div>
+		<div class="span9">
+			<p>If you choose this format <code>Featured Image</code> will be used as thumbnail.</p>
+			<h4>Galley [id] Name</h3>
+			<p>Gallery is not created in this page. You can choose one gallery from <code> GALLERIES</code>. You can check the section releated with Creating a Gallery.</p>
+		</div>
+	</div>
+	<hr />	
+	
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Preparing a Blog Page</h3>
+			<p>You can use shortcodes for Portfolio, blog or gallery instead of Page Template. It is much more flexible.</p>
+</div>
+		<div class="span9">
+			<p>Create a page and use <code>[rb_blog]</code> shortcode. Its that simple to create a blog page. You can use Shortcode builder to create this shorcode.</p>
+		  <h4>Number of items in Page</h4>
+			<p>Default is 10 items in a page.If you want to change, you can use <code>[rb_blog cats="" postperpage="6"]]</code></p>
+			<h4>Creating multiple blog</h4>
+			<p>If you want to create multiple blogs or if you want to show some categorized posts, you can use <code>[blog cats="1,2,3"]</code> 
+			you must seperate your categories ids by using commas. </p>
+<h4>Arranging Metas</h4>
+			<p>Default meta format is <code>[blog metaformat="posted, comments, tag, category"]</code> they can be removed. If you remove them they won't be shown in listing. But they will be shown in post detail page.</p>
+		</div>
+	</div>
+	<hr />	
+	
+	
+</section><!-- Blog -->
+
+
+
+<section id="gallery">
+	<div class="page-header">
+	  <h1>Gallery <small> Publish your Video and Images</small></h1>
+	</div>
+	<div class="row">
+		<div class="span3">
+			<h3>Create a Gallery</h3>
+			<p></p>
+		</div>
+		<div class="span9">
+			 <p>You can publish your gallery in posts, as portfolio items or standalone. On the other hand, slider shortcodes may use gallery items too.</p>
+			 <p>You should one of theme choose as a front page</p>
+			 <p>You can create your first Gallery by clicking <code>Add a New Gallery</code> in <code>Galleries &gt; Add Gallery Item</code> page and giving its name.</p>
+			 <p>Galleries are called by their &quot;ID&quot; numbers instead of their names</p>
+		</div>
+	</div>
+	<hr />
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Edit Your Galleries</h3>
+			<p></p>
+		</div>
+		<div class="span9">
+			<h4><strong>Adding Images to the Gallery</strong></h4>
+			<p>By clicking <code>Add Image &gt; Choose Image</code> button over item list, <span id="result_box4" lang="en">you can select and upload how many images you want at once.</span>			</p>
+			<h4>Adding Youtube, Vimeo or Self Hosted Video  to Gallery</h4>
+			<p>By clicking <code>Add Video</code> button over item list you need to enter whole url of the video. Then you need to enter its width and height values.You can finish the process by clicking <code>Add Media</code> button. Thumbnails of Youtube and Vimeo files are created automatically. But you should upload poster image for your self hosted videos.	  </p>
+	  </div>
+	</div>
+	<hr />
+	<hr />
+	<hr />
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Preparing a Gallery Page</h3>
+			<p>You can use shortcodes for Portfolio, blog or gallery instead of Page Template. It is much more flexible.		</p>
+		</div>
+		<div class="span9">
+			<p>Create a page and use <code>[rb_gallery id="1" imagewidth=&quot;300&quot; imageheight=&quot;300&quot;]</code> shortcode. Its that simple to show your images and video files. You can use Shortcode builder for to create this shortcode.</p>
+	  </div>
+	</div>
+	<hr />	
+</section><!-- Gallery -->
+
+
+
+
+
+
+<section id="themesettings">
+	<div class="page-header">
+	  <h1>Theme Settings <small> You have the control</small></h1>
+	  <p>You can reach theme settings from <code>RB Admin</code></p>
+	</div>
+	
+	
+	<div class="row">
+		<div class="span3">
+			<h3>General Settings</h3>
+			<p></p>
+		</div>
+		<div class="span9">
+			<h4>Logo Upload</h4>
+			<p>You can  click to <code>Get URL</code> beside <code>Logo URL</code>. Then click the image that you want to use in Image manager.</p>
+		  <h4>Favicon Upload</h4>
+			<p>You can upload your favicon at the same way like Logo uploading. You need to have your favicon in .ico format. Its thumbnail is not shown.</p>
+<h4>Google Analytics Code</h4>
+			<p>You don't need to use the complete code. You need to copy and paste its ID part.</p>
+            <h4>Home's Top Section</h4>
+			<p>You can choose which page publish on top section.</p>
+            <h4>Other Pages's Top Section</h4>
+			<p>You can choose top section for blog, shop and other pages.</p>
+			
+	  </div>
+	</div>
+	<hr /> 
+	
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Footer Options</h3>
+			<p></p>
+		</div>
+		<div class="span9">
+			<p>You can change footertext, footer background image, footer columns,contact form and social icons links here.			</p>
+            <h4>Footer Header</h4>
+			<p>You can change footer header text here.</p>
+            <h4>Footer Header Sub Text</h4>
+			<p>You can change footer header sub text here.</p>
+           <h4>Contact Form</h4>
+			<p>You can hide and open contact form here.</p>
+             <h4>Footer Text</h4>
+			<p>You can add your copyrights text here.</p> 
+             <h4>Footer Background Image</h4>
+			<p>You can change footer backgrounds image here.</p>
+            <h4>Footer Background Image Type</h4>
+			<p>You can change footer backgrounds image here.</p> 
+            <h4>Image Type</h4>
+			<p>You can change footer backgrounds image type (classic, with rainy effect, with parallax)  here.</p> 
+             <h4>Footer Pattern</h4>
+			<p>Show / Hide footer pattern option here.</p> 
+            <h4>Footer Columns</h4>
+			<p>You can manage footer coloumns here.</p> 
+            
+            
+		</div>
+	</div>
+	<hr /> 
+	
+	<hr />
+	<div class="row">
+		<div class="span3">
+			<h3>Style Options</h3>
+			<p></p>
+		</div>
+		<div class="span9">
+			<p>You can change the colors of the theme in this section. Also You can manage header and content fonts here.</p>
+		</div>
+	</div>
+	<hr />
+</section> <!-- Theme Settings -->
+
+
+
+<section id="widgets">
+	<div class="page-header">
+	  <h1>Widgets Settings<small> Small Tools</small></h1>
+	</div>
+	
+	<div class="row">
+		<div class="span3">
+			<h3>Widget Areas</h3>
+			<p></p>
+		</div>
+		<div class="span9">
+			<p>There are 15 widgets area in this theme. Except several ones (bottom pop up, header pop up and page title) all widget areas are shown or hidden according to sidebar's position.</p>		
+			
+			<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+				  <th>Name</th>
+				  <th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				  <td><p>Widgets that activated according to the settings or included pages.</p></td>
+				  <td>
+					<p>Right Widget Area</p>
+					<p>Left Widget Area</p>
+					<p>FrontPage Widget Area</p>
+					<p>Single Page Widget Area</p>
+					<p>Page Page Widget Area</p>
+					<p>Category Widget Area</p>
+					<p>Tag Widget Area</p>
+					<p>Date Widget Area</p>
+					<p>Search Widget Area</p>
+				</td>
+				</tr>
+			</tbody>
+			</table>
+			
+		</div>
+	</div>
+	<hr />
+	
+</section> <!-- Widgets -->
+
+
+<section id="translation">
+	<div class="page-header">
+	  <h1>Translate <small> MultiLanguage Support</small></h1></div>
+	
+	<div class="row">
+		<div class="span3">
+			<h3>How to support for languages</h3>
+</div>
+		<div class="span9">
+			<p>There are default.po and default.mo files in theme folder. You can edit them by using an editor for any language.</p>
+			<p>If you find a po editor, try  <a target="_blank" href="http://www.poedit.net/">poEdit</a></p>
+<p>After saving your default.po and default.mo files, name it according to international code.</p>
+	  <p>You need to set your WPLANG variable to display different languages in your WordPress configuration. For more information please visit <a target="_blank" href="http://codex.wordpress.org/Installing_WordPress_in_Your_Language">here</a>.</div>
+	</div>
+	<hr />
+	
+
+</section> <!-- Translation -->
+
+
+<section id="shortcodes"></section> <!-- Shorcodes -->
+
+
+<div class="goodbye">
+    <p>Thank you again for buying our theme. We tried to help you in with this documentation. We can't guarantee that theme is bugless but we can guarantee that we can help you in every condition to run this theme as we said. You can register our &quot;member only&quot; forum and let us know about your problems or any news.</p>
+</div>
+<hr />
+
+<footer>
+    <p>RenkliBeyaz | All the colors come together in White</p>
+</footer>
+
+</div><!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script>
+</body>
+</html>

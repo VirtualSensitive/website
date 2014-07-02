@@ -1,0 +1,63 @@
+.mce-i-rbshortcode_button{
+	background:url(../tinymce/img/icon.png) no-repeat center center !important;
+}
+
+.rb-dialog-margin{
+	padding:10px;
+	border-bottom:1px dashed #eee;
+}
+
+.modal.modal-wide .modal-dialog {
+  width: 60%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+.orderListWrapper .list-group  button{
+	margin: 0 3px !important;
+}
+.orderItemShortCode{
+	display:none;
+}
+.addOrderListItem{
+	margin:5px !important; 
+}
+
+.iconlist{
+	width:100%;
+	height:200px;
+	overflow:auto;
+	overflow-x: hidden;
+	border:1px solid #ddd;
+}
+.iconlist span{
+	transition: all 500ms;
+	-webkit-transition: all 500ms; 
+	cursor:pointer;
+	display:inline-block;
+	text-align:center;
+	width:10%;
+	height:40px;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+.iconlist span:hover,
+.iconlist span.selected
+{
+	
+
+	background-color:#000;
+	color:#fff;
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2); 
+	transform: scale(1.2);
+}
+.iconlist span i{
+	margin-top:15px;
+}
+.listcreator .targetbox{
+	margin:10px 0;
+}
+.removelistcreator{
+	margin-right:10px !important;
+}

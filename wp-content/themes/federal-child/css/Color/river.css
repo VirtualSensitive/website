@@ -1,0 +1,160 @@
+/* #00a8ff */
+
+.bg-color {
+    background-color: #00a8ff!important;  
+}
+
+.widget-title {
+    color: #00a8ff;
+}
+
+.list-menu a:hover {
+    background: #00a8ff;
+    color: #fff;
+}
+
+a {
+    color: #00a8ff;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #00a8ff;  
+}
+
+.button-portfolio a { 
+    background:#00a8ff!important;
+    color:#fff;
+}
+
+.thumbnail-portfolio .like span {
+    color:#00a8ff!important;
+}
+
+.tp-bannertimer {
+    background:#00a8ff!important;
+    z-index: 20!important;
+}
+
+.top-navigation-inner .menu-top li a:hover , .font-color {
+    color:#00a8ff;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    background:#00a8ff;
+    border:0px;
+    border-bottom: 1px solid #00a8ff;
+    color:#fff;
+
+    border-radius: 0;
+}
+
+.hi-icon-effect-3b .hi-icon {
+    background-color:rgba(0,0,0,0.6);
+}
+
+.hi-icon-effect-3 .hi-icon:after {
+    background-color:#00a8ff;
+}
+
+.hi-icon-effect-3 .hi-icon:after {
+    background-color:#00a8ff;
+}
+
+.hi-icon-effect-3 .hi-icon:hover {
+    box-shadow: 0 0 0 4px #fff;
+}
+
+.hi-icon-effect-3 .hi-icon {
+    box-shadow: 0 0 0 4px #00a8ff;
+}
+
+.thumbnails .label .date {
+    color:#00a8ff;
+    line-height: 24px;
+}
+
+.button-portfolio a:hover {
+    border:5px solid #00a8ff;
+}
+
+.owl-controls .owl-page.active span , .single-blog .icon-type {
+    background:#00a8ff!important;
+
+}
+
+.widget-tags a:hover , .frame-blog .date , .frame-blog .readmore a.readmore {
+    font-family: 'Raleway', sans-serif;
+    background:#00a8ff!important;
+    color:#fff;
+}
+
+.pin-contact .label:hover {
+    background:#00a8ff;
+    border-color: #fff;
+}
+
+.pagination a.active {
+    background: #00a8ff!important;
+    color:#fff;
+}
+
+.button-q {
+    font-family: 'Raleway', sans-serif;
+    background: #00a8ff!important;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.thumbnail-services {
+    border-color: #00a8ff!important;
+}
+
+.thumbnail-services span {
+    font-size: 25px;
+}
+
+.box-services:hover .thumbnail-services span {
+    color:#fff;
+}
+
+.box-services:hover .thumbnail-services {
+    background: #00a8ff!important;
+    border-color: #00a8ff!important;
+}
+
+.hover-font-color:hover {
+    color: #00a8ff!important;
+}
+
+.option-social {
+    border-color:#00a8ff!important;
+}
+
+.hi-icon-effect-3b div:hover h3 {
+    color: #00a8ff;
+}
+
+.thumbnail-portfolio figcaption {
+    background:#00a8ff;
+}
+
+.thumbnail-icon-about img {
+    border: 3px solid #00a8ff;
+}
+
+.form-contact input[type="submit"] {
+    background: #00a8ff!important;
+}
+
+.pin-contact .label {
+    border-color: #00a8ff;
+}
+
+.tp-bullets.simplebullets .bullet.selected {
+    background: #00a8ff!important;
+}
+
+.thumbnail-icon-about img:hover {
+    background: #00a8ff;
+    box-shadow: 5px 5px 10px rgba(0,168,255,0.5);
+}

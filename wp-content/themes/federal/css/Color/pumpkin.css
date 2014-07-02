@@ -1,0 +1,160 @@
+/* #d35400 */
+
+.bg-color {
+    background-color: #d35400!important;  
+}
+
+.widget-title {
+    color: #d35400;
+}
+
+.list-menu a:hover {
+    background: #d35400;
+    color: #fff;
+}
+
+a {
+    color: #d35400;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #d35400;  
+}
+
+.button-portfolio a { 
+    background:#d35400!important;
+    color:#fff;
+}
+
+.thumbnail-portfolio .like span {
+    color:#d35400!important;
+}
+
+.tp-bannertimer {
+    background:#d35400!important;
+    z-index: 20!important;
+}
+
+.top-navigation-inner .menu-top li a:hover , .font-color {
+    color:#d35400;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    background:#d35400;
+    border:0px;
+    border-bottom: 1px solid #d35400;
+    color:#fff;
+
+    border-radius: 0;
+}
+
+.hi-icon-effect-3b .hi-icon {
+    background-color:rgba(0,0,0,0.6);
+}
+
+.hi-icon-effect-3 .hi-icon:after {
+    background-color:#d35400;
+}
+
+.hi-icon-effect-3 .hi-icon:after {
+    background-color:#d35400;
+}
+
+.hi-icon-effect-3 .hi-icon:hover {
+    box-shadow: 0 0 0 4px #fff;
+}
+
+.hi-icon-effect-3 .hi-icon {
+    box-shadow: 0 0 0 4px #d35400;
+}
+
+.thumbnails .label .date {
+    color:#d35400;
+    line-height: 24px;
+}
+
+.button-portfolio a:hover {
+    border:5px solid #d35400;
+}
+
+.owl-controls .owl-page.active span , .single-blog .icon-type {
+    background:#d35400!important;
+
+}
+
+.widget-tags a:hover , .frame-blog .date , .frame-blog .readmore a.readmore {
+    font-family: 'Raleway', sans-serif;
+    background:#d35400!important;
+    color:#fff;
+}
+
+.pin-contact .label:hover {
+    background:#d35400;
+    border-color: #fff;
+}
+
+.pagination a.active {
+    background: #d35400!important;
+    color:#fff;
+}
+
+.button-q {
+    font-family: 'Raleway', sans-serif;
+    background: #d35400!important;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.thumbnail-services {
+    border-color: #d35400!important;
+}
+
+.thumbnail-services span {
+    font-size: 25px;
+}
+
+.box-services:hover .thumbnail-services span {
+    color:#fff;
+}
+
+.box-services:hover .thumbnail-services {
+    background: #d35400!important;
+    border-color: #d35400!important;
+}
+
+.hover-font-color:hover {
+    color: #d35400!important;
+}
+
+.option-social {
+    border-color:#d35400!important;
+}
+
+.hi-icon-effect-3b div:hover h3 {
+    color: #d35400;
+}
+
+.thumbnail-portfolio figcaption {
+    background:#d35400;
+}
+
+.thumbnail-icon-about img {
+    border: 3px solid #d35400;
+}
+
+.form-contact input[type="submit"] {
+    background: #d35400!important;
+}
+
+.pin-contact .label {
+    border-color: #d35400;
+}
+
+.tp-bullets.simplebullets .bullet.selected {
+    background: #d35400!important;
+}
+
+.thumbnail-icon-about img:hover {
+    background: #d35400;
+    box-shadow: 5px 5px 10px rgba(211,84,0,0.5);
+}

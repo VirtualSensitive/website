@@ -1,0 +1,122 @@
+/*
+Theme Name: Federal
+Theme URI: http://mythemes.renklibeyaz.com/federalwp/
+Description: One Page Premium WordPress Theme
+Author: RenkliBeyaz - Salih Ozovali
+Author URI: http://themeforest.net/user/RenkliBeyaz
+Version: 1.0.0
+
+Tags: One Page, Parallax, WooCommerce
+
+License:
+License URI:
+
+You can add your custom styles to this css file. This Theme uses style.php file for dynamic styles.
+
+*/
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+.gallery-caption{
+	font-size:14px;
+	line-height:20px;
+	text-align:center;
+	padding:0 20px;
+}
+
+img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
+    height: auto;
+}
+
+img.size-full, img.size-large, .wp-post-image, .post-thumbnail img {
+    height: auto;
+    max-width: 100%;
+}
+
+.sticky{
+	border:1px solid #333;
+	padding:15px;
+}
+
+.bypostauthor{ }

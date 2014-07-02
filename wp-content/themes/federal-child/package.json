@@ -1,0 +1,14 @@
+{
+  "name": "federal-child",
+  "version": "1.0.0",
+  "description": "Virtual Sensitive wordpress theme",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Florent Schildknecht",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "gulp": "~3.8.5"
+  }
+}
