@@ -122,10 +122,14 @@ global $Rb_demo;
 			</section>
 
 			<section id='page-wrapper'>
-				<div id='page-container'>
-					<svg id='page-round-container-left' viewBox='0 0 712 1000'>
-						<path class='mask' d='M0,0 H712 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000 H0 V0 Z' />
-						<path class='border' d='M712,0 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000' />
-						<path class='header-background' d='M0,0 H712 C634.1,26,563.2,67,503,120 H0 V0 Z' />
+				<aside id='page-round-container-left'>
+					<svg class='svg-mask' viewBox='0 0 712 1000'>
+						<g class='group' transform='translate(0, 0)'>
+							<path class='mask' d='M0,0 H712 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000 H0 V0 Z' />
+							<path class='border' d='M712,0 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000' />
+							<path class='header-background' d='M0,0 H712 C634.1,26,563.2,67,503,120 H0 V0 Z' />
+						</g>
 					</svg>
+				</aside>
+				<div id='page-container'>
 					<div id='page-round-content'>

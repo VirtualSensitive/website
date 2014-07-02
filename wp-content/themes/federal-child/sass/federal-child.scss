@@ -1,8 +1,9 @@
 @import "bourbon/bourbon";
 @import "mixins";
 
+$container-size: 1800px;
 $content-size: 1000px;
-$side-panels-width: 71.2%;
+$side-panels-width: 712px;
 
 $mask-background: rgba(255, 255, 255, 0.15);
 $mask-header-background: rgb(255, 255, 255);
@@ -11,45 +12,52 @@ $mask-border: rgba(255, 255, 255, 1);
 html {
     body {
         #page-wrapper {
+            position: relative;
             width: 100%;
             height: 100%;
-            background: blue;
+            background: url('../images/background.jpg') center center no-repeat;
+            background-size: cover;
+            #page-round-container-left,
+            #page-round-container-right {
+                position: absolute;
+                top: 0;
+                width: percentage($side-panels-width / $container-size);
+                max-width: $side-panels-width;
+                height: auto;
+                min-height: $content-size;
+                .mask {
+                    fill: $mask-background;
+                }
+                .border {
+                    fill: none;
+                    stroke: $mask-border;
+                    stroke-width: 1;
+                }
+                .header-background {
+                    fill: $mask-header-background;
+                }
+            }
+            #page-round-container-left {
+                left: 0;
+                .group {
+                }
+            }
+            #page-round-container-right {
+                right: 0;
+                .group {
+                }
+            }
             #page-container {
                 position: relative;
                 width: 100%;
-                max-width: 1800px;
+                max-width: $container-size;
                 height: auto;
                 margin: 0 auto;
                 @include clearfix();
-                #page-round-container-left,
-                #page-round-container-right {
-                    position: absolute;
-                    top: 0;
-                    width: (71.2 * $content-size / 100);
-                    height: 100%;
-                    min-height: $content-size;
-                    .mask {
-                        fill: $mask-background;
-                    }
-                    .border {
-                        fill: none;
-                        stroke: $mask-border;
-                        stroke-width: 1;
-                    }
-                    .header-background {
-                        fill: $mask-header-background;
-                    }
-                }
-                #page-round-container-left {
-                    left: 0;
-                }
-                #page-round-container-right {
-                    right: 0;
-                }
                 #page-round-content {
                     position: relative;
                     top: (32 * $content-size / 100);
-                    width: $content-size;
+                    width: percentage($content-size / $container-size);
                     height: $content-size;
                     margin: 0 auto;
                 }
