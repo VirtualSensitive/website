@@ -7,17 +7,28 @@
             'height': '1000px'
         });
 
-        var sideMaskBackgroundWidth = parseInt(($('#page-wrapper').width() - $('#page-container', '#page-wrapper').width()) / 2);
+        var sideMaskBackgroundWidth = ($('#page-wrapper').width() - $('#page-container', '#page-wrapper').width()) / 2;
+        var sideMaskBackgroundWidth = {
+            'left': Math.ceil(sideMaskBackgroundWidth),
+            'right': Math.floor(sideMaskBackgroundWidth)
+        };
+
         // TODO: round sideMaskBackgroundWidth to fit the plain width outside #page-container
         $('.side-mask-background', '#page-wrapper').css({
-            'width': sideMaskBackgroundWidth + 'px',
             'height': $('#page-round-container-left').height() + 'px'
+        });
+        $('#side-mask-background-left', '#page-wrapper').css({
+            'width': sideMaskBackgroundWidth.left + 'px'
+        });
+        $('#side-mask-background-right', '#page-wrapper').css({
+            'width': sideMaskBackgroundWidth.right + 'px'
         });
 
         $('#page-navigation', '#page-wrapper').css({
             'height': Math.ceil($('.header-background').get(0).getBoundingClientRect().height) + 'px'
         });
 
+        // Resize
         $('#page-container', '#page-wrapper').css({
             'height': $('.group').get(0).getBoundingClientRect().height + 'px'
         });
