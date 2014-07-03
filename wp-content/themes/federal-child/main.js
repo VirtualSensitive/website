@@ -13,6 +13,8 @@
             'right': Math.floor(sideMaskBackgroundWidth)
         };
 
+        console.log(sideMaskBackgroundWidth);
+
         // TODO: round sideMaskBackgroundWidth to fit the plain width outside #page-container
         $('.side-mask-background', '#page-wrapper').css({
             'height': $('#page-round-container-left').height() + 'px'
@@ -27,6 +29,8 @@
         $('#page-navigation', '#page-wrapper').css({
             'height': Math.ceil($('.header-background').get(0).getBoundingClientRect().height) + 'px'
         });
+
+        // console.log($('.group').get(0).getBoundingClientRect().height + 'px');
 
         // Resize
         $('#page-container', '#page-wrapper').css({

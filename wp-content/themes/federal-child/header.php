@@ -86,6 +86,7 @@ global $Rb_demo;
 			</section>
 			-->
 			<section id='page-wrapper'>
+				<div id='page-background'></div>
 				<nav id='page-navigation'>
 					<div id="page-logo">
 						<img src="<?php echo $rb_logoURL; ?>" alt="<?php bloginfo('name'); ?>" >
@@ -106,7 +107,7 @@ global $Rb_demo;
 							</div>
 						</div>
 					<?php } ?>
-					<div class="menu right">
+					<div class="menu left">
 						<?php
 						if ( has_nav_menu( 'headermenu' ) ){
 							wp_nav_menu(array(
@@ -124,9 +125,14 @@ global $Rb_demo;
 				<div id='side-mask-background-left' class='side-mask-background'></div>
 				<div id='page-container'>
 					<aside id='page-round-container-left'>
-						<svg class='svg-mask' viewBox='0 0 712 1000' preserveAspectRatio='xMaxYMin meet'>
+						<svg class='svg-mask' viewBox='0 0 712 1000' preserveAspectRatio='xMinYMin meet'>
+							<defs>
+								<pattern id="mask-background" patternUnits="userSpaceOnUse" width="712" height="1000">
+									<image xlink:href="http://localhost/PHP/VirtualSensitive/wp-content/themes/federal-child/images/background-3.jpg" x="0" y="0" width="712" height="1000" />
+								</pattern>
+							</defs>
 							<g class='group' transform='translate(0, 0)'>
-								<path class='mask' d='M0,0 H712 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000 H0 V0 Z' />
+								<path class='mask' d='M0,0 H712 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000 H0 V0 Z' fill='url(#mask-background)' />
 								<path class='border' d='M712,0 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000' />
 								<path class='header-background' d='M0,0 H712 C634.1,26,563.2,67,503,120 H0 V0 Z' />
 							</g>
