@@ -4,16 +4,17 @@ $rb_footer_type = get_option('footerType', 'classic');
 $rb_footer_image = get_option('footerImage', '');
 ?>
 					</div>
+					<aside id='page-round-container-right'>
+						<svg class='svg-mask' viewBox='0 0 712 1000' preserveAspectRatio='xMinYMin meet'>
+							<g class='group'>
+								<path class='mask' d='M0,0 C239.3,79,412.1,304.2,412.1,570 C412.1,738.6,342.6,891,230.6,1000 H712 V0 H0 Z' />
+								<path class='border' d='M0,0 C239.3,79,412.1,304.2,412.1,570 C412.1,738.6,342.6,891,230.6,1000' />
+								<path class='header-background' d='M0,0 H712 V120 H209 C148.9,67,78,26,0,0 Z' />
+							</g>
+						</svg>
+					</aside>
 				</div>
-				<aside id='page-round-container-right'>
-					<svg class='svg-mask' viewBox='0 0 712 1000'>
-						<g class='group'>
-							<path class='mask' d='M0,0 C239.3,79,412.1,304.2,412.1,570 C412.1,738.6,342.6,891,230.6,1000 H712 V0 H0 Z' />
-							<path class='border' d='M0,0 C239.3,79,412.1,304.2,412.1,570 C412.1,738.6,342.6,891,230.6,1000' />
-							<path class='header-background' d='M0,0 H712 V120 H209 C148.9,67,78,26,0,0 Z' />
-						</g>
-					</svg>
-				</aside>
+				<div id='side-mask-background-right' class='side-mask-background'></div>
 			</section>
 
 			<?php if(!empty($rb_footer_image) && $rb_footer_type=='parallax'){ ?>

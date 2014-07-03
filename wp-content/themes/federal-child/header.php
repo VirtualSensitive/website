@@ -48,45 +48,9 @@ global $Rb_demo;
 				</div>
 			</div>
 			<?php endif; ?>
-
+			<!--
 			<section class="top-navigation content-white">
 				<article class="top-navigation-inner ">
-					<div class="hidden-xs">
-						<header class="container ">
-							<div class="logo left">
-								<img src="<?php echo $rb_logoURL; ?>" alt="<?php bloginfo('name'); ?>" >
-							</div>
-
-							<?php
-							$rb_header_socials = '';
-							$rb_hSocials = array('Google', 'Twitter', 'Facebook');
-							foreach($rb_hSocials as $rb_hSocial){
-								$rb_hSocial_link = trim(get_option('headerSocial'.str_replace(' ','',$rb_hSocial), ''));
-								if(!empty($rb_hSocial_link))
-									$rb_header_socials .= '<a class="'.strtolower(str_replace(' ','',$rb_hSocial)).'" href="'.$rb_hSocial_link.'" target="_blank" ></a>';
-							}
-
-							if(!empty($rb_header_socials)){ ?>
-							<div id="header-share" class="right">
-								<?php echo $rb_header_socials; ?>
-							</div>
-							<?php } ?>
-							<nav class="menu right">
-								<?php
-								if ( has_nav_menu( 'headermenu' ) ){
-									wp_nav_menu(array(
-									   'theme_location' => 'headermenu',
-									   'echo' => true,
-									   'container' => '',
-									   'menu_class' => 'menu-top',
-									   'walker'=> new Description_Walker,
-									   'depth' => 4) );
-								}
-								?>
-							</nav>
-						</header>
-					</div>
-
 					<div class="hidden-lg hidden-md hidden-sm">
 						<header class="navbar" role="banner">
 							<div class="container">
@@ -120,16 +84,52 @@ global $Rb_demo;
 					</div>
 				</article>
 			</section>
-
+			-->
 			<section id='page-wrapper'>
-				<aside id='page-round-container-left'>
-					<svg class='svg-mask' viewBox='0 0 712 1000'>
-						<g class='group' transform='translate(0, 0)'>
-							<path class='mask' d='M0,0 H712 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000 H0 V0 Z' />
-							<path class='border' d='M712,0 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000' />
-							<path class='header-background' d='M0,0 H712 C634.1,26,563.2,67,503,120 H0 V0 Z' />
-						</g>
-					</svg>
-				</aside>
+				<nav id='page-navigation'>
+					<div id="page-logo">
+						<img src="<?php echo $rb_logoURL; ?>" alt="<?php bloginfo('name'); ?>" >
+					</div>
+					<?php
+					$rb_header_socials = '';
+					$rb_hSocials = array('Google', 'Twitter', 'Facebook');
+					foreach($rb_hSocials as $rb_hSocial){
+						$rb_hSocial_link = trim(get_option('headerSocial'.str_replace(' ','',$rb_hSocial), ''));
+						if(!empty($rb_hSocial_link))
+							$rb_header_socials .= '<a class="'.strtolower(str_replace(' ','',$rb_hSocial)).'" href="'.$rb_hSocial_link.'" target="_blank" ></a>';
+					}
+
+					if (!empty($rb_header_socials)) { ?>
+						<div id="page-share">
+							<div id='page-share-icons'>
+								<?php echo $rb_header_socials; ?>
+							</div>
+						</div>
+					<?php } ?>
+					<div class="menu right">
+						<?php
+						if ( has_nav_menu( 'headermenu' ) ){
+							wp_nav_menu(array(
+								'theme_location' => 'headermenu',
+								'echo' => true,
+								'container' => '',
+								'menu_class' => 'menu-top',
+								'walker'=> new Description_Walker,
+								'depth' => 4
+							));
+						}
+						?>
+					</div>
+				</nav>
+				<div id='side-mask-background-left' class='side-mask-background'></div>
 				<div id='page-container'>
+					<aside id='page-round-container-left'>
+						<svg class='svg-mask' viewBox='0 0 712 1000' preserveAspectRatio='xMaxYMin meet'>
+							<g class='group' transform='translate(0, 0)'>
+								<path class='mask' d='M0,0 H712 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000 H0 V0 Z' />
+								<path class='border' d='M712,0 C472.8,79, 300,304.2, 300,570 C300,738.6, 369.6,891, 481.6,1000' />
+								<path class='header-background' d='M0,0 H712 C634.1,26,563.2,67,503,120 H0 V0 Z' />
+							</g>
+						</svg>
+					</aside>
 					<div id='page-round-content'>

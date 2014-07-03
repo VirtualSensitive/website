@@ -17,43 +17,123 @@ html {
             height: 100%;
             background: url('../images/background.jpg') center center no-repeat;
             background-size: cover;
-            #page-round-container-left,
-            #page-round-container-right {
+            #page-navigation {
                 position: absolute;
                 top: 0;
-                width: percentage($side-panels-width / $container-size);
-                max-width: $side-panels-width;
-                height: auto;
-                min-height: $content-size;
-                .mask {
-                    fill: $mask-background;
+                width: 100%;
+                z-index: 50;
+                #page-logo {
+                    display: table-cell;
+                    height: inherit;
+                    padding: 0 25px;
+                    vertical-align: middle;
                 }
-                .border {
-                    fill: none;
-                    stroke: $mask-border;
-                    stroke-width: 1;
-                }
-                .header-background {
-                    fill: $mask-header-background;
+                #page-share {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: inherit;
+                    padding: 0 25px;
+                    @include clearfix();
+                    #page-share-icons {
+                        display: table-cell;
+                        height: inherit;
+                        vertical-align: middle;
+                        a {
+                            display: inline-block;
+                            width: 30px;
+                            height: 30px;
+                            margin: 4px 3px 0 3px;
+                            border: 1px solid #999;
+                            border-radius: 50%;
+                            &:before {
+                                display: block;
+                                width: 30px;
+                                text-align: center;
+                                line-height: 30px;
+                                font-family: "FontAwesome";
+                                color: #999;
+                                opacity: 0.5;
+                                @include transition(all 0.5s ease-out);
+                            }
+                            &.google {
+                                &:before {
+                                    content: "\f0d5";
+                                }
+                            }
+                            &.facebook {
+                                &:before {
+                                    content: "\f09a";
+                                }
+                            }
+                            &.twitter {
+                                &:before {
+                                    content: "\f099";
+                                }
+                            }
+                            &:hover,
+                            &:active {
+                                border-color: #00b5e7;
+                                color: #00b5e7;
+                                @include transition(all 0.5s ease-out);
+                                &:before {
+                                    opacity: 1;
+                                    color: #00b5e7;
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            #page-round-container-left {
-                left: 0;
-                .group {
+            .side-mask-background {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                background: url('../images/side-mask-repeat.png') top left repeat-x;
+                &#side-mask-background-left {
+                    left: 0;
                 }
-            }
-            #page-round-container-right {
-                right: 0;
-                .group {
+                &#side-mask-background-right {
+                    right: 0;
                 }
             }
             #page-container {
                 position: relative;
                 width: 100%;
                 max-width: $container-size;
-                height: auto;
+                height: 1000px;
                 margin: 0 auto;
                 @include clearfix();
+                #page-round-container-left,
+                #page-round-container-right {
+                    position: absolute;
+                    top: 0;
+                    width: percentage($side-panels-width / $container-size);
+                    max-width: $side-panels-width;
+                    height: auto;
+                    max-height: $content-size;
+                    .mask {
+                        fill: $mask-background;
+                    }
+                    .border {
+                        fill: none;
+                        stroke: $mask-border;
+                        stroke-width: 1;
+                    }
+                    .header-background {
+                        fill: $mask-header-background;
+                    }
+                }
+                #page-round-container-left {
+                    left: 0;
+                    .group {
+                    }
+                }
+                #page-round-container-right {
+                    right: 0;
+                    .group {
+                    }
+                }
                 #page-round-content {
                     position: relative;
                     top: (32 * $content-size / 100);
