@@ -29,6 +29,7 @@ html {
         margin-top: 0 !important;
     }
     body {
+        padding: 85px 0 0 0;
         #wpadminbar {
             display: none;
         }
@@ -55,6 +56,9 @@ html {
             }
         }
         .top-navigation {
+            position: fixed;
+            top: 0;
+            width: 100%;
             .top-navigation-inner {
                 .menu {
                     position: relative;

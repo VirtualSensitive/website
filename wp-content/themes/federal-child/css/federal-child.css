@@ -8,6 +8,9 @@ html {
     margin-top: 0 !important;
   }
 }
+html body {
+  padding: 85px 0 0 0;
+}
 html body #wpadminbar {
   display: none;
 }
@@ -27,6 +30,11 @@ html body #header-share a {
 }
 html body #header-share a:link, html body #header-share a:visited, html body #header-share a:hover, html body #header-share a:active {
   margin: 10px 3px;
+}
+html body .top-navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 html body .top-navigation .top-navigation-inner .menu {
   position: relative;
