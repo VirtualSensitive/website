@@ -1,18 +1,5 @@
-html {
-  margin: 0 !important;
-  margin-top: 0 !important;
-}
-@media screen {
-  html {
-    margin: 0 !important;
-    margin-top: 0 !important;
-  }
-}
 html body {
   padding: 85px 0 0 0;
-}
-html body #wpadminbar {
-  display: none;
 }
 html body .site-logo,
 html body #header-share {

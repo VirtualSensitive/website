@@ -22,17 +22,8 @@ $menu-color: $menu-blue;
 $menu-background: $menu-blue;
 
 html {
-    margin: 0 !important;
-    margin-top: 0 !important;
-    @media screen {
-        margin: 0 !important;
-        margin-top: 0 !important;
-    }
     body {
         padding: 85px 0 0 0;
-        #wpadminbar {
-            display: none;
-        }
         .site-logo,
         #header-share {
             height: 50px;
