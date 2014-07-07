@@ -48,6 +48,7 @@ function rb_theme_setup(){
 
 	// menus
 	register_nav_menu('headermenu', 'Header Navigation');
+	register_nav_menu('footermenu', 'Footer Navigation');
 
 	//use thumbnail with post
 	add_theme_support( 'post-thumbnails' );
