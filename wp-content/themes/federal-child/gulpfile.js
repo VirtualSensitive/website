@@ -28,10 +28,10 @@ gulp.task('styles', function () {
             trace: true
         }))
         .on('error', gutil.log)
+        .pipe(gulp.dest('css'))
         .pipe(autoprefixer('last 1 version'))
         .pipe(size())
         .pipe(csso())
-        .pipe(gulp.dest('css'))
         .pipe(minifycss())
         .pipe(size())
         .pipe(rename({
