@@ -56,8 +56,10 @@ global $Rb_demo;
 				<article class="top-navigation-inner ">
 					<div class="hidden-xs">
 						<header class="container ">
-							<div class="logo left">
-								<img src="<?php echo $rb_logoURL; ?>" alt="<?php bloginfo('name'); ?>" >
+							<div class='site-logo left'>
+								<a href='<?php echo home_url('/'); ?>'>
+									<img src="<?php echo $rb_logoURL; ?>" alt="<?php bloginfo('name'); ?>" />
+								</a>
 							</div>
 							<?php
 							$rb_header_socials = '';
@@ -107,8 +109,10 @@ global $Rb_demo;
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 									</button>
-									<div class="logo mobile left">
-										<img src="<?php echo $rb_logoURL; ?>" alt="<?php bloginfo('name'); ?>" >
+									<div class="site-logo mobile left">
+										<a href='<?php echo home_url('/'); ?>'>
+											<img src="<?php echo $rb_logoURL; ?>" alt="<?php bloginfo('name'); ?>" >
+										</a>
 									</div>
 								</div>
 								<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
