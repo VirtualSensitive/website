@@ -11,6 +11,7 @@ include 'includes/general-settings-ajax.php';
 include 'includes/register-widgets.php';
 include 'includes/update_notifier.php';
 include 'includes/helper-functions.php';
+include 'includes/vs-animation.php';
 
 include 'includes/rb-widget-tab.php';
 include 'includes/rb-widget-flickr.php';
@@ -87,6 +88,9 @@ function rb_theme_setup(){
 
 	// Body classes
 	add_filter('body_class', 'add_slug_body_class');
+
+	// Virtual Sensitive animation custom type
+	add_action('init', 'vs_animation_type');
 }
 
 function GetCertainPostTypes($query){
@@ -170,6 +174,19 @@ function rb_enqueue_scripts(){
 		'themeURL' => $tmpurl,
 		'homeURL'=>home_url(),
 	));
+
+	if (is_page('home')) {
+		wp_register_script('underscore', get_template_directory_uri() . '/js/underscore-1.6.0.js', array(), null, true);
+		wp_register_script('tweenmax', get_template_directory_uri() . '/js/tweenmax-1.12.1.min.js', array(), null, true);
+		wp_register_script('jquery-gsap', get_template_directory_uri() . '/js/jquery.gsap-0.1.8.min.js', array(), null, true);
+		wp_register_script('ws-animation', get_template_directory_uri() . '/js/ws-animation-1.0.0.min.js', array(
+			'underscore',
+			'tweenmax',
+			'jquery-gsap'
+		), null, true);
+		wp_enqueue_script('ws-animation');
+		wp_enqueue_style('ws-animation',  get_template_directory_uri() . '/css/ws-animation.min.css', false, null, 'all');
+	}
 }
 
 function rb_admin_enqueue_scripts(){
