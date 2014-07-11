@@ -11,7 +11,6 @@ include 'includes/general-settings-ajax.php';
 include 'includes/register-widgets.php';
 include 'includes/update_notifier.php';
 include 'includes/helper-functions.php';
-include 'includes/vs-animation.php';
 
 include 'includes/rb-widget-tab.php';
 include 'includes/rb-widget-flickr.php';
@@ -88,9 +87,6 @@ function rb_theme_setup(){
 
 	// Body classes
 	add_filter('body_class', 'add_slug_body_class');
-
-	// Virtual Sensitive animation custom type
-	add_action('init', 'vs_animation_type');
 }
 
 function GetCertainPostTypes($query){
