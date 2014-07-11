@@ -1,4 +1,4 @@
-website
+Virtual Sensitive
 =======
 
-Website
+This is a WordPress-based website example with a custom theme (federal-child)
