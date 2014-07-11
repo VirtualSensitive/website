@@ -50,6 +50,7 @@ html {
             position: fixed;
             top: 0;
             width: 100%;
+            z-index: 990;
             .top-navigation-inner {
                 .menu {
                     position: relative;
@@ -66,7 +67,7 @@ html {
                         margin-left: -$menu-toggle-size / 2;
                         line-height: $menu-toggle-size;
                         z-index: 11;
-                        border: none;
+                        border: 1px solid #eee;
                         border-radius: 50%;
                         background: none;
                         background-color: #fff;

@@ -22,6 +22,7 @@ html body .top-navigation {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 990;
 }
 html body .top-navigation .top-navigation-inner .menu {
   position: relative;
@@ -47,7 +48,7 @@ html body .top-navigation .top-navigation-inner .menu #menu-toggle {
   margin-left: -3em;
   line-height: 6em;
   z-index: 11;
-  border: none;
+  border: 1px solid #eee;
   border-radius: 50%;
   background: none;
   background-color: #fff;

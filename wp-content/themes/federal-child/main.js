@@ -4,7 +4,6 @@
     $('#menu-toggle', '.menu').on('click', function (e) {
         e.preventDefault();
         var $menu = $(this).parent().find('#menu-content-wrapper');
-        console.log($menu);
         if ($menu.hasClass('open')) {
             $menu.removeClass('open');
             $(this).text('Menu');

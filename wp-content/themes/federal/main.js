@@ -1,22 +1,22 @@
 (function($) {
 	"use strict";
 	$('#top_section').height($(window).height());
-	
+
 	$.Isotope.prototype._getMasonryGutterColumns = function() {
 		var gutter = this.options.masonry && this.options.masonry.gutterWidth || 0;
 		var containerWidth = this.element.width();
-		 
+
 		this.masonry.columnWidth = this.options.masonry && this.options.masonry.columnWidth ||
 		// Or use the size of the first item
 		this.$filteredAtoms.outerWidth(true) ||
 		// If there's no items, use size of container
 		containerWidth;
-		 
+
 		this.masonry.columnWidth += gutter;
 		this.masonry.cols = Math.floor((containerWidth + gutter) / this.masonry.columnWidth);
 		this.masonry.cols = Math.max(this.masonry.cols, 1);
 	};
-	
+
 	$.Isotope.prototype._masonryReset = function() {
 		// Layout-specific props
 		this.masonry = {};
@@ -28,7 +28,7 @@
 		this.masonry.colYs.push(0);
 		}
 	};
-	 
+
 	$.Isotope.prototype._masonryResizeChanged = function() {
 		var prevSegments = this.masonry.cols;
 		// Update cols/rows
@@ -36,17 +36,17 @@
 		// Return if updated cols/rows is not equal to previous
 		return (this.masonry.cols !== prevSegments);
 	};
-	
+
 	// modified Isotope methods for gutters in fitRows
 	Number.prototype.roundTo = function(num) {
 		var resto = this%num;
-		if (resto <= (num/2)) { 
+		if (resto <= (num/2)) {
 			return this-resto;
 		} else {
 			return this+num-resto;
 		}
 	}
-	
+
 	$.Isotope.prototype._fitRowsLayout = function($elems) {
 		var instance = this,
 			containerWidth = this.element.width(),
@@ -83,11 +83,11 @@
 		});
 
 	};
-	
+
 	//-----------------------------------------
 	// Parallax Background
 	//-----------------------------------------
-	
+
 	function setFixedNavigation(){
 		if($(document).width()>768){
 			if( $(document).scrollTop() > $('.top-navigation').position().top){
@@ -102,20 +102,20 @@
 			$(".top-navigation").css({position:'relative'});
 		}
 	}
-	
+
 	$('.colorbg').each(function(){
 		if($(this).data('bgcolor')){
 			$(this).css('background-color', $(this).data('bgcolor'));
 		}
 	});
-	
+
 	$('.vspace').each(function(){
 		if($(this).data('vspace'))
 			$(this).css('height', $(this).data('vspace'));
 	});
-	
+
 	$('article.post table').addClass('table');
-	
+
 	//-----------------------------------------
 	// Rainy Day
 	//-----------------------------------------
@@ -146,17 +146,17 @@
 				$(this).parent().find('canvas').css({width: $(this).width(), height:$(this).height()});
 			});
 		});
-		
-		
+
+
 		$('.parallax-background, .normal-background').each(function(){
 			if($(this).data('background')){
 				$(this).css('background-image', 'url('+$(this).data('background')+')');
-				
+
 				if( $(this).hasClass('parallax-background') ){
 					var parallaxspeed = 0.4
 					if( $(this).data('parallaxspeed'))
 						parallaxspeed = $(this).data('parallaxspeed');
-					if(! (navigator.userAgent.match(/iPhone/i) || 
+					if(! (navigator.userAgent.match(/iPhone/i) ||
 						navigator.userAgent.match(/iPad/i) ||
 						navigator.userAgent.match(/iPod/i)
 						) )
@@ -171,13 +171,13 @@
 			}
 		});
 	});
-	
+
 	setFixedNavigation();
-	
+
 	// ----------------------------------
 	// Menu Animation
 	// ----------------------------------
-	
+
 	$('.top-navigation .menu-top li').hover(function(){
 		var topval = 10;
 		if($(this).parent().hasClass('menu-top')) topval = 50;
@@ -189,11 +189,11 @@
 			$(this).css({display:'none'});
 		} });
 	});
-	
+
 	// ----------------------------------
-	// Isotope Portfolio 
+	// Isotope Portfolio
 	// ----------------------------------
-	
+
 	$(".isotope-container .thumbnail-portfolio").css('opacity', '0');
 
 	function setportfolio() {
@@ -201,7 +201,7 @@
 			$(".isotope-container").isotope('reLayout');
 		}
 	}
-	
+
 	function setFlexSlider(target){
 		 $(target +" .slider_flexslider").map(function() {
 			var $this = $(this);
@@ -214,7 +214,7 @@
 				directionNav: false,
 				sync: ".carousel_flexslider"
 			});
-			
+
 			$(this).parent().find('.carousel_flexslider').flexslider({
 				animation: "slide",
 				controlNav: false,
@@ -230,17 +230,17 @@
 			}, 1000);
 		});
 	}
-	
-	
+
+
 	$(window).load(function(){
-	
+
 		setFlexSlider('body');
 		$('body').fitVids();
-		
+
 		$('.body-loading').delay(1000).animate({opacity:0}, {duration:1000, easing:'easeOutQuart', complete:function(){
 			$(this).remove();
 		}});
-		
+
 		setTimeout(function(){
 			if($(location.href.split("#")[1])) {
 				var anchor = $('#'+location.href.split("#")[1]);
@@ -248,8 +248,8 @@
 					$('html,body').animate({scrollTop: anchor.offset().top - 80}, 500);
 			}
 		}, 500);
-		
-		
+
+
 		$(".isotope-container").imagesLoaded(function(){
 			$(".isotope-container").isotope({
 				layoutMode: "perfectMasonry",
@@ -265,14 +265,14 @@
 			});
 		});
 	});
-	
-	if(! (navigator.userAgent.match(/iPhone/i) || 
+
+	if(! (navigator.userAgent.match(/iPhone/i) ||
 		navigator.userAgent.match(/iPad/i) ||
 		navigator.userAgent.match(/iPod/i)
 		) )
 		new WOW().init();
 
-    $(document).ready(function() {		
+    $(document).ready(function() {
 
         //-----------------------------------------
         // Owl Header
@@ -326,7 +326,7 @@
             });
             var owl = $(this).data('owlCarousel');
         });
-   
+
 
         //-----------------------------------------
         // Owl Slider using Sub
@@ -361,7 +361,7 @@
         //-----------------------------------------
         // Responsive Lightbox
         //-----------------------------------------
-	
+
 		$('.lightbox').magnificPopup({
 			delegate: 'a',
 			type: 'image',
@@ -379,7 +379,7 @@
 				}
 			}
 		});
-		
+
 		$('a img[class*="wp-image"]').not('.nomodal').each(function(){
 			if(!$(this).parent().parent().hasClass('lightbox')){
 				$(this).parent().magnificPopup({
@@ -391,7 +391,7 @@
 				});
 			}
 		});
-		
+
 
 
 		//-----------------------------------------
@@ -401,17 +401,17 @@
         $(".close-contact").delegate(".fa-angle-double-up", "click", function() {
             $("html,body").animate({scrollTop: 0}, 1000);
         });
-		
+
 		//-----------------------------------------
         // Google Map
         //-----------------------------------------
-		
+
 		$('.gmap').each(function(){
 			if($(this).data('width')!='')
 				$(this).css('width', $(this).data('width'));
 			if($(this).data('height')!='')
 				$(this).css('height', $(this).data('height'));
-				
+
 			var infoBoxMessage='';
 			if($(this).find('> span').length==1){
 				infoBoxMessage = $(this).find('> span').html();
@@ -422,7 +422,7 @@
 			myOptions.center = latlng;
 			var mapObjName = new google.maps.Map($(this)[0], myOptions);
 			var markerName = new google.maps.Marker({
-				map: mapObjName, 
+				map: mapObjName,
 				position: mapObjName.getCenter()
 			});
 			if(infoBoxMessage!=''){
@@ -433,35 +433,35 @@
 				});
 			}
 		});
-		
-		
+
+
 		//----------------------------------------
 		// Bootstrap Elemens
 		//----------------------------------------
 		$('a[data-toggle="tooltip"]').tooltip();
 		$('a[data-toggle="popover"]').popover();
-		
+
 		$('a[data-toggle="tooltipfooter"]').tooltip();
 		$('a[data-toggle="tooltipfooter"]').on('hover', function () {
 			$('.tooltip').css({marginTop:'-10px'});
 		})
-		
+
 		$('#contentBox a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-			e.target 
+			e.target
 			e.relatedTarget
-		});	
-		
+		});
+
 		$('.accordition-toggle').on('shown.bs.collapse', function (e) {
 			$(this).find('.panel-collapse.in').parents('.panel').addClass('active');
 		}).on('hidden.bs.collapse', function (e) {
 			$(this).find('.panel-collapse').not('.in').parents('.panel').removeClass('active');
 		})
-		
+
 		$('.accordition-toggle .tab-toggle').click(function(){
 			$(this).parents('.panel').find('a[data-toggle="collapse"]').trigger('click');
 		});
 
-       
+
 		//-----------------------------------------
         // Navigation Smooth Scrolling
         //-----------------------------------------
@@ -469,7 +469,7 @@
 			currentClass: 'current',
 			scrollOffset: 80
 		});
-		
+
 		$('a[href*=#]:not([href=#])').not('.jsaction').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 				var target = $(this.hash);
@@ -480,14 +480,14 @@
 				}
 			}
 		});
-       
+
 
         //-----------------------------------------
         // Chart Check Waypoint
         //-----------------------------------------
 
         $('.chart').waypoint(function(direction) {
-		
+
 			var bgcolor = '#ffffff';
 			if($(this).data('bgcolor')) bgcolor = $(this).data('bgcolor');
 
@@ -504,21 +504,21 @@
                 }
             });
         }, {offset: 1000});
-		
+
         $(".Logo-home, .control-sound, .control-down").hide();
         setTimeout(function() {
             if ($('.tp-banner').hasClass('tp-banner')) {
                 $(".Logo-home").css({'top': $('.tp-banner li').find("div.start.tp-caption").offset().top - $(".Logo-home").height() - 50}).fadeIn();
                 $(".control-down").css({'top': $(".tp-bullets").offset().top - $(".control-down").height() - 50}).fadeIn();
             }
-			
+
 			$(".control-sound").css({'top': $(".control-sound").parents('section').height() - $(".control-sound").height() - 150}).fadeIn();
         }, 3000);
-		
 
-       
+
+
 		$('.paralax-revslider .tp-bgimg').each(function(key, data) {
-			if(! (navigator.userAgent.match(/iPhone/i) || 
+			if(! (navigator.userAgent.match(/iPhone/i) ||
 				navigator.userAgent.match(/iPad/i) ||
 				navigator.userAgent.match(/iPod/i)
 				) ){
@@ -528,8 +528,8 @@
 				}, 1000);
 			}
 		});
-           
-        
+
+
 
         //-----------------------------------------
         // Owl slider Header For Page Video and Pattern
@@ -569,13 +569,13 @@
         //-----------------------------------------
         // Navigation And Fixed Bug Video Page
         //-----------------------------------------
-		
+
 		setFixedNavigation();
         $(document).scroll(function() {
 			setFixedNavigation();
         });
-		
-		
+
+
 
         //-----------------------------------------
         // Add Flickr
@@ -598,17 +598,17 @@
                 });
             });
         });
-		
-		
+
+
 		$('.thumbnail-portfolio .fa-heart').click(function(event){
 			event.preventDefault();
 			event.stopImmediatePropagation();
-		
+
 			var $this = $(this);
-			
+
 			// Retrieve post ID from data attribute
 			var post_id = $this.data("post-id");
-			
+
 			// Ajax call
 			$.ajax({
 				type: "post",
@@ -625,15 +625,15 @@
 					}
 				}
 			});
-			
+
 			return false;
 		});
-		
-		
+
+
 		//-----------------------------------------
         // WP Default Gallery
         //-----------------------------------------
-	
+
 		function calculateWPGalleryColWidth($container){
 			var colcount =  $container.data('col-count');
 			if( $container.width()<=720){
@@ -653,7 +653,7 @@
 			var $container = $(this);
 			$container.imagesLoaded(function(){
 				$container.isotope({
-					masonry: { 
+					masonry: {
 						columnWidth: calculateWPGalleryColWidth($container),
 						gutterWidth: 15,
 					},
@@ -692,7 +692,7 @@
             return false;
         });
 
-		
+
 		$(".thumbnail-portfolio").delegate('.opento', 'click', function(event) {
 			event.stopImmediatePropagation();
 			event.preventDefault();
@@ -714,7 +714,7 @@
 							}
 							$(".window-portfolio").stop().slideDown('slow');
 						});
-						
+
 						$(".window-portfolio .detail-portfolio").delegate('i.close', 'click', function() {
 							$(".window-portfolio").slideUp('slow');
 						});
@@ -744,12 +744,12 @@
         // YTPlayer JS
         //-----------------------------------------
 		$(".player").mb_YTPlayer();
-		
-		
+
+
 		//-----------------------------------------
         // Search Form
         //-----------------------------------------
-		
+
 		$('.form-search form').submit(function(event){
 			if($.trim( $(this).find('.searchbox').val() ).length<1){
 				event.preventDefault();
@@ -800,7 +800,7 @@
 			swfPath: "/js",
 			supplied: "mp3"
 		});
-		
+
 		//-----------------------------------------
 		// Add Twitter Feeds
 		//-----------------------------------------
@@ -810,7 +810,7 @@
 			params = 'action=rb_getTweets&nonce='+ajax_var.nonce+'&limit='+$(this).data('limit')+'&user='+$(this).data('user');
 			$.post(ajax_var.url, params, function(data){
 				$this.html(data);
-				
+
 				$this.owlCarousel({
 					navigation: false, // Show next and prev buttons
 					slideSpeed: 600,
@@ -821,10 +821,10 @@
 					autoPlay: 4000,
 					stopOnHover: true
 				});
-				
+
 			});
 		});
-		
+
 		//-----------------------------------------
 		// Add Widget Twitter Feeds
 		//-----------------------------------------
@@ -833,10 +833,10 @@
 			var $this = $(this);
 			params = 'action=rb_getWidgetTweets&nonce='+ajax_var.nonce+'&limit='+$(this).data('limit')+'&user='+$(this).data('user');
 			$.post(ajax_var.url, params, function(data){
-				$this.find('ul').html(data);	
+				$this.find('ul').html(data);
 			});
 		});
-  
+
         //-----------------------------------------
         // check contact form
         //-----------------------------------------
@@ -855,7 +855,7 @@
                     thisForm.find('.name').attr("placeholder", "Name");
                 }
             }
-			
+
             if (thisForm.find('.email').val() === "") {
                 thisForm.find('.email').addClass("error");
                 thisForm.find('.email').focus();
@@ -889,7 +889,7 @@
                     thisForm.find('.phone').attr("placeholder", "Phone");
                 }
             }
-			
+
             if (thisForm.find('.website').val() === "") {
                 thisForm.find('.website').addClass("error");
                 thisForm.find('.website').focus();
@@ -901,7 +901,7 @@
                     thisForm.find('.website').attr("placeholder", "Website");
                 }
             }
-			
+
             if (thisForm.find('.message-contact').val() === "") {
                 thisForm.find('.message-contact').addClass("error");
                 thisForm.find('.message-contact').focus();
@@ -934,7 +934,7 @@
 								thisForm.parent().find(".success").text(data.error).fadeIn();
 							});
 						}
-						
+
 						setTimeout(function(){
 							thisForm.parent().find('.success').fadeOut(function(){
 								thisForm.fadeIn();
@@ -945,7 +945,7 @@
 				  });
 				});
             }
-			
+
 			return false;
         });
 
@@ -953,7 +953,7 @@
             var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
             return pattern.test(emailAddress);
         }
-		
+
     });
 
 })(jQuery);
