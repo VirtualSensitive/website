@@ -84,7 +84,7 @@ html body .top-navigation .top-navigation-inner .menu #menu-content-wrapper {
   pointer-events: none;
   overflow: hidden;
 }
-html body .top-navigation .top-navigation-inner .menu #menu-content-wrapper #menu-main-navigation {
+html body .top-navigation .top-navigation-inner .menu #menu-content-wrapper .top-menu {
   position: relative;
   top: 30px;
 }
