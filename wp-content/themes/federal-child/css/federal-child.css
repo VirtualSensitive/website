@@ -312,6 +312,12 @@ html body .panel-group .panel.panel-default.active .panel-heading .panel-title a
   background: #00b5e7;
 }
 
+html body div .tp-caption {
+  width: auto;
+  text-align: initial;
+  left: auto !important;
+}
+
 html body {
   /* ourteam */
 }
