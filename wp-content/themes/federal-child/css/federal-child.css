@@ -282,3 +282,31 @@ html body .footer-wrapper a:hover, html body .footer-wrapper a:active {
     z-index: 999;
   }
 }
+
+html body .panel-group .panel.panel-default .panel-heading .panel-title:before {
+  content: "";
+  display: none;
+}
+html body .panel-group .panel.panel-default .panel-heading .panel-title a:before {
+  content: "\f067";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  font-family: "Fontawesome";
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #222222;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+html body .panel-group .panel.panel-default .panel-heading:hover .panel-title a:before {
+  background: #00b5e7;
+}
+html body .panel-group .panel.panel-default.active .panel-heading .panel-title a:before {
+  content: "\f068";
+  background: #00b5e7;
+}

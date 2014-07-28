@@ -1,0 +1,57 @@
+@import "bourbon/bourbon";
+
+html {
+    body {
+        .panel-group {
+            .panel {
+                &.panel-default {
+                    .panel-heading {
+                        .panel-title {
+                            &:before {
+                                content: "";
+                                display: none;
+                            }
+                            a {
+                                &:before {
+                                    content: "\f067";
+                                    display: inline-block;
+                                    width: 40px;
+                                    height: 40px;
+                                    margin-right: 20px;
+                                    font-family: "Fontawesome";
+                                    line-height: 40px;
+                                    text-align: center;
+                                    color: #fff;
+                                    background-color: #222222;
+                                    border-radius: 50%;
+                                    @include transition(0.3s);
+                                }
+                            }
+                        }
+                        &:hover {
+                            .panel-title {
+                                a {
+                                    &:before {
+                                        background: #00b5e7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        .panel-heading {
+                            .panel-title {
+                                a {
+                                    &:before {
+                                        content: "\f068";
+                                        background: #00b5e7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
