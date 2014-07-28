@@ -825,9 +825,6 @@ function sh_person($attr, $content=null){
 						$re .= '<h6 class="ourteam-position uppercase"><span class="ourteam-position font-gray">'.$title.'</span></h6>';
 					$re .= '</header>';
 
-
-
-
 					if(!empty($content)){
 						$re .= '<figcaption>';
 						$re .= '<span class="line-div small"></span><p class="ourteam-message">	'.$content.'</p>';
