@@ -2365,6 +2365,7 @@ ol.commentlist, ol.commentlist ul{
 div.tp-caption {
 	width: 100%;
 	text-align: center;
+	/* left: initial; */
 }
 
 /* bootstrap elements */
