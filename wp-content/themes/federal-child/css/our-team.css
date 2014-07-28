@@ -3,6 +3,7 @@ html body {
 }
 html body .ourteam-box {
   position: relative;
+  margin: 0 0 50px 0;
 }
 html body .ourteam-box figcaption {
   position: absolute;
@@ -33,20 +34,20 @@ html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container {
   height: 100%;
   padding: 15px 25px;
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social {
+html body .ourteam-box .option-social {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: auto;
   width: 100%;
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:link,
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:visited {
+html body .ourteam-box .option-social a:link,
+html body .ourteam-box .option-social a:visited {
   display: inline-block;
   width: 33.3%;
   height: 30px;
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:link:before,
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:visited:before {
+html body .ourteam-box .option-social a:link:before,
+html body .ourteam-box .option-social a:visited:before {
   font-family: "FontAwesome";
   line-height: 30px;
   text-align: center;
@@ -54,28 +55,28 @@ html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-soc
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:link.facebook,
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:visited.facebook {
+html body .ourteam-box .option-social a:link.facebook,
+html body .ourteam-box .option-social a:visited.facebook {
   background-color: #3d599b;
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:link.facebook:before,
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:visited.facebook:before {
+html body .ourteam-box .option-social a:link.facebook:before,
+html body .ourteam-box .option-social a:visited.facebook:before {
   content: '\f09a';
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:link.twitter,
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:visited.twitter {
+html body .ourteam-box .option-social a:link.twitter,
+html body .ourteam-box .option-social a:visited.twitter {
   background-color: #5cadff;
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:link.twitter:before,
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:visited.twitter:before {
+html body .ourteam-box .option-social a:link.twitter:before,
+html body .ourteam-box .option-social a:visited.twitter:before {
   content: '\f099';
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:link.googleplus,
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:visited.googleplus {
+html body .ourteam-box .option-social a:link.googleplus,
+html body .ourteam-box .option-social a:visited.googleplus {
   background-color: #fd4142;
 }
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:link.googleplus:before,
-html body .ourteam-box .ourteam-box-thumbnail .ourteam-box-container .option-social a:visited.googleplus:before {
+html body .ourteam-box .option-social a:link.googleplus:before,
+html body .ourteam-box .option-social a:visited.googleplus:before {
   content: '\f0d5';
 }
 html body .ourteam-box .thumbnail-img-hidden img {

@@ -19,7 +19,7 @@ function sh_video($attr, $content=null){
 	else
 		$extra = array();
 	$sourceStr = rb_getSource( $attr['url'], $imgW, $imgH, $extra);
-	return $sourceStr;		
+	return $sourceStr;
 }
 
 add_shortcode('list-group', 'sh_list_group');
@@ -32,14 +32,14 @@ function sh_list_group($attr, $content=null){
 			$contentText = (!empty($item['content']))?$item['content']:'';
 			if(empty($contentText))
 			$contentText = (!empty($item['attr']['contenttext']))?$item['attr']['contenttext']:'';
-				
+
 			if(!empty($item['attr']['badge']))
 				$re .= "\t".'<li class="list-group-item"><span class="badge">'.$item['attr']['badge'].'</span>'.$contentText.'</li>'."\n";
 			elseif(!empty($item['attr']['link'])){
 				$ul = false;
 				$target = (!empty($item['attr']['target']))?' target="'.$item['attr']['target'].'" ':'';
 				$active = (isset($item['attr']['active']) && $item['attr']['active']=='true')?'active':'';
-				
+
 				if(empty($item['attr']['heading']))
 					$re .= "\t".'<a href="'.$item['attr']['link'].'" '.$target.' class="list-group-item '.$active.'">'.$contentText.'</a>'."\n";
 				else
@@ -50,7 +50,7 @@ function sh_list_group($attr, $content=null){
 		}
 	}
 	$ret = '';
-	
+
 	$ret .= ($ul)?'<ul class="list-group">'."\n":'<div class="list-group">'."\n";
 	$ret .= $re;
 	$ret .= ($ul)?'</ul>'."\n":'</div>'."\n";
@@ -63,13 +63,13 @@ add_shortcode('item', 'sh_return_empty');
 add_shortcode('map','sh_map');
 function sh_map($attr, $content=null)
 {
-$content = trim($content); 
+$content = trim($content);
 //defaults
 $width = '';
 $height = '';
 $zoom = 11; // 0,7 to 18
 $controls = 'false';
-$maptype = 'HYBRID'; // ROADMAP | SATELLITE | TERRAIN 
+$maptype = 'HYBRID'; // ROADMAP | SATELLITE | TERRAIN
 if(!empty($attr['zoom']))
 	$zoom = $attr['zoom'];
 if(!empty($attr['controls']))
@@ -81,7 +81,7 @@ if(!empty($attr['width']))
 if(!empty($attr['height']))
 	$height = $attr['height'];
 
-$mapID = createRandomKey(5); 
+$mapID = createRandomKey(5);
 
 $re  = '<div class="gmap" data-width="'.$width.'" data-height="'.$height.'" data-lat="'.$attr['lat'].'" data-lng="'.$attr['lng'].'" data-zoom="'.$zoom.'" data-controls="'.$controls.'" data-maptype="'.$type.'" >';
 if(!empty($content))
@@ -96,7 +96,7 @@ function createRandomKey($amount){
 	$randkey = "";
 	for ($i=0; $i<$amount; $i++)
 		$randkey .= substr($keyset, rand(0, strlen($keyset)-1), 1);
-	return $randkey;	
+	return $randkey;
 }
 
 function sh_button($attr, $content = null)
@@ -189,7 +189,7 @@ function sh_panel($attr, $content=null){
 	$footer = (isset($attr['footer']))?$attr['footer']:'';
 	$re = '';
 	$color = (!empty($attr['color']))?$attr['color']:'default';
-	
+
 	$re .= '<div class="panel panel-'.$color.'">';
 	if(!empty($header)){
 		$re .= '<div class="panel-heading">';
@@ -199,7 +199,7 @@ function sh_panel($attr, $content=null){
 	$re .= '<div class="panel-body">';
     $re .= do_shortcode($content);
 	$re .= '</div>';
-	
+
 	if(!empty($footer))
 		$re .= '<div class="panel-footer">'.$footer.'</div>';
 	$re .= '</div>';
@@ -218,43 +218,43 @@ function sh_clear($attr, $content = null){ 	return '<div class="clearfix"></div>
 
 
 add_shortcode('sidebar', 'sh_sidebar');
-function sh_sidebar($attr, $content = null){ 
+function sh_sidebar($attr, $content = null){
 	$re  = '';
 	$re .= '<aside class="sidebar-nav">';
 	$re .= '<ul>';
 	if(is_active_sidebar('first-general-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('first-general-wa').'</li>';
-		
+
 	if(is_front_page() && is_active_sidebar('front-page-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('front-page-wa').'</li>';
-		
+
 	if(is_single() && is_active_sidebar('single-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('single-wa').'</li>';
-		
+
 	if(is_page() && is_active_sidebar('page-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('page-wa').'</li>';
-			
+
 	if(is_category() && is_active_sidebar('category-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('category-wa').'</li>';
-		
+
 	if(is_tag() && is_active_sidebar('tag-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('tag-wa').'</li>';
-		
+
 	if(is_author() && is_active_sidebar('author-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('author-wa').'</li>';
-		
+
 	if(is_date() && is_active_sidebar('date-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('date-wa').'</li>';
-		
+
 	if(is_archive() && is_active_sidebar('archive-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('archive-wa').'</li>';
-		
+
 	if(is_search() && is_active_sidebar('search-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('search-wa').'</li>';
-		
+
 	if(is_active_sidebar('last-general-wa'))
 		$re .= '<li>'.rb_get_dynamic_sidebar('last-general-wa').'</li>';
-		
+
 	$re .= '</ul>';
 	$re .= '</aside>';
 	return $re;
@@ -277,7 +277,7 @@ function sh_row($attr, $content = null){
 		default:
 			$extra_class = 'box-speacing';
 	}
-	return '<div class="row '.$extra_class.'">'.do_shortcode($content).'</div>'; 
+	return '<div class="row '.$extra_class.'">'.do_shortcode($content).'</div>';
 }
 add_shortcode('row', 'sh_row');
 
@@ -406,28 +406,28 @@ add_shortcode('tab_item', 'sh_return_empty');
 
 
 add_shortcode('testimonial', 'sh_testimonial');
-function sh_testimonial($attr, $content = null){	
+function sh_testimonial($attr, $content = null){
 	$re = '';
 	$re .= '<div class="Owl-Slider-Sub-None text-center speacing-box '.rb_get_extra_el_class($attr).'" '.rb_get_extra_el_attr($attr).'>';
 	$contentArray = rb_sh2array($content);
 	foreach($contentArray as $item){
 		if($item['shortcode']=='testimonial_item'){
 			$re .= '<div class="item"><figure>';
-			
+
 			$re .= '<div class="thumbnail-images">';
 			$re .= '<span class="fa fa-2x fa-angle-left mouse-pointer testimonials-arrow hover-font-color"></span>';
 			if(isset($item['attr']['image']))
 				$re .= '<img src="'.$item['attr']['image'].'" alt="customer">';
 			$re .= '<span class="fa fa-2x fa-angle-right mouse-pointer testimonials-arrow hover-font-color"></span>';
 			$re .= '</div>';
-			
+
 			$re .= '<figcaption>';
 			if(isset($item['attr']['owner']))
 				$re .= '<h2 class=" font-color">'.$item['attr']['owner'].'</h2>';
-				
+
 			if(isset($item['attr']['title']))
 				$re .= '<p>'.$item['attr']['title'].'</p>';
-			
+
 			if(!empty($item['content'])){
 				$re .= '<p class="text-center message-testimonials"><span class="fa fa-quote-left font-color"></span>';
 				$itemContent = strip_tags($item['content']);
@@ -452,7 +452,7 @@ function sh_icon($attr, $content = null){
 		'type' => '',
 		'highlight' => '',
 	), $attr ) );
-	
+
 	if(!empty($type)) $type = 'fa-'.$type;
 	if(!empty($size)) $type = 'fa-'.$size;
 	if(!empty($highlight)) $highlight = 'highlight';
@@ -471,8 +471,8 @@ function sh_service_item($attr, $content=null){
 		'link' => '',
 		'image' => ''
 	), $attr ) );
-	$re = '<div class="services text-center">';	
-	
+	$re = '<div class="services text-center">';
+
 	$link = (empty($link))?'javascript:void(0);':$link;
 	if(!empty($title))
 		$re .= '<h5 class="text-center">'.$title.'</h5>';
@@ -499,7 +499,7 @@ function sh_price_table_item($attr, $content=null){
 	), $attr ) );
 	$re = '<div class="pricetable text-center">';
 	$re .= '<div class="pricetable-container">';
-	
+
 	if(!empty($header))
 		$re .= '<div class="pt-header">'.$header.'</div>';
 	if(!empty($price)){
@@ -533,7 +533,7 @@ function sh_rb_single_page($attr, $content=null){
 	$re = '';
 	$re .= do_shortcode($content);
 	return $re;
-}	
+}
 add_shortcode('rb_page', 'sh_rb_page');
 function sh_rb_page($attr, $content=null){
 	extract( shortcode_atts( array(
@@ -546,7 +546,7 @@ function sh_rb_page($attr, $content=null){
 		'pattern'=>'false',
 	), $attr ) );
 	$re = '';
-	
+
 	if(!empty($id) || !empty($slug)){
 		$page_content = '';
 		if(!empty($slug)){
@@ -561,7 +561,7 @@ function sh_rb_page($attr, $content=null){
 			$pageContent = rb_clean_spaces($pageContent);
 			$addionalClass = '';
 			$pbg = '';
-			
+
 			if(!empty($bgcolor) ){
 				if($bgcolor!='firstcolor'){
 					$pbg .= ' data-bgcolor="'.$bgcolor.'" ';
@@ -570,25 +570,25 @@ function sh_rb_page($attr, $content=null){
 					$addionalClass .= 'firstcolor ';
 				}
 			}
-			
+
 			$bgtype = '';
-			if($type=='boxedfullbgparallax') 
+			if($type=='boxedfullbgparallax')
 				$bgtype = 'parallax-background';
 			elseif(!empty($bgimage))
 				$bgtype = 'normal-background';
-				
-				
+
+
 			if(!empty($bgimage))
 				$pbg .= ' data-background="'.$bgimage.'" ';
 			if($bgtype=='parallax-background' && !empty($parallaxspeed) )
 				$pbg .= ' data-parallaxspeed="'.$parallaxspeed.'" ';
-			
-			
+
+
 			$addionalClass.= ' '.$bgtype;
-			
+
 			if($type=='boxedfullbg' || $type=='boxedfullbgparallax'){
-				
-					
+
+
 				$re .= '<section id="'.$page->post_name.'" class="'.$addionalClass.'" '.$pbg.' >';
 				$re .= '<article class="sub-box">';
 				if($pattern=='true')
@@ -607,7 +607,7 @@ function sh_rb_page($attr, $content=null){
 				$re .=  '<article class="container speacing-box effect-waypoint">'. $pageContent .'</article>';
 				$re .= '</section>';
 			}
-			
+
 		}else{
 			// no content
 		}
@@ -629,7 +629,7 @@ function sh_page_header($attr, $content=null){
 		</div>';
 	if(!empty($subtext))
 		$re .= '<p class="text-center head-sub">'.$subtext.'</p>';
-	
+
 	$re .= '</header>';
 	return $re;
 }
@@ -669,11 +669,11 @@ function sh_icon_text($attr, $content=null){
 	$re .= '<div class="clearfix"></div>';
 	if(!empty($content))
 		$re .= '<p>'.do_shortcode($content).'</p>';
-		
+
 	if(!empty($link))
 		$re .= '<a href="'.$link.'">'.__('Read more...', 'rb').'</a>';
 	$re .= '</div>';
-	
+
 	return $re;
 }
 
@@ -713,10 +713,10 @@ function sh_pin_contact($attr, $content=null){
 	$re .= '<div class="content">';
 	if(!empty($title))
 		$re .= '<h4>'.$title.'</h4>';
-	
+
 	$re .= '<p>'.$content.'</p>';
 	$re .= '</div>';
-	
+
 	$re .= '</div>';
 	return $re;
 }
@@ -743,12 +743,12 @@ function sh_circle_processbar($attr, $content=null){
 	if(!empty($title))
 		$re .= '<h3 class="font-color">'.$title.'</h3>';
 	$re .= '</div>';
-	
+
 	return $re;
 }
 
 /*
-add_shortcode('person', 'sh_person'); 
+add_shortcode('person', 'sh_person');
 function sh_person($attr, $content=null){
 	extract( shortcode_atts( array(
 		'skype' => '',
@@ -763,7 +763,7 @@ function sh_person($attr, $content=null){
 	), $attr ) );
 	$re = '';
 	$themeurl = get_template_directory_uri();
-	
+
 	$re .= '<figure class="text-center ourteam-box"><div class="ourteam-box-thumbnail"><div class="option-social">';
 	if(!empty($skype))
 		$re .= '<a href="'.$skype.'" target="_blank" ><img src="'.$themeurl.'/images/social-icon/small/skype.png" class="number-1" alt="social"></a>';
@@ -788,16 +788,16 @@ function sh_person($attr, $content=null){
 	if(!empty($title))
 		$re .= '<h6 class="ourteam-position uppercase"><span class="ourteam-position font-gray">'.$title.'</span></h6>';
 	$re .= '</header>';
-	
+
 	if(!empty($content))
 		$re .= '<figcaption><span class="line-div small"></span><p class="ourteam-message">	'.$content.'</p></figcaption>';
-	
+
 	$re .= '</figure>';
-	
+
 	return $re;
 } */
 
-add_shortcode('person', 'sh_person'); 
+add_shortcode('person', 'sh_person');
 function sh_person($attr, $content=null){
 	extract( shortcode_atts( array(
 		'facebook'=> '',
@@ -809,66 +809,66 @@ function sh_person($attr, $content=null){
 	), $attr ) );
 	$re = '';
 	$themeurl = get_template_directory_uri();
-	
+
 		$re .= '<figure class="text-center ourteam-box">';
-		
+
 		if(!empty($image))
-				$re .= '<div class="thumbnail-img-hidden"><img src="'.$image.'" class="" alt="ourteam" draggable="false"></div>';	
-		
+				$re .= '<div class="thumbnail-img-hidden"><img src="'.$image.'" class="" alt="ourteam" draggable="false"></div>';
+
 			$re .= '<div class="ourteam-box-thumbnail">';
 				$re .= '<div class="ourteam-box-container">';
-			
+
 					$re .= '<header>';
 					if(!empty($name))
 						$re .= '<h4 class="ourteam-name uppercase"><span class="ourteam-name font-hard">'.$name.'</span></h4>';
 					if(!empty($title))
 						$re .= '<h6 class="ourteam-position uppercase"><span class="ourteam-position font-gray">'.$title.'</span></h6>';
 					$re .= '</header>';
-		
-		
-					
-					
+
+
+
+
 					if(!empty($content)){
 						$re .= '<figcaption>';
 						$re .= '<span class="line-div small"></span><p class="ourteam-message">	'.$content.'</p>';
 						$re .= '</figcaption>';
 					}
-					
-					$re .= '<div class="option-social">';
-						if(!empty($facebook))
-							$re .= '<a class="facebook" href="'.$facebook.'" target="_blank" ></a>';
-						if(!empty($twitter))
-							$re .= '<a class="twitter" href="'.$twitter.'" target="_blank" ></a>';
-						if(!empty($googleplus))
-							$re .= '<a class="googleplus" href="'.$googleplus.'" target="_blank" ></a>';
-					$re .= '</div> <!-- .option-social -->';
-					
+
 			$re .= '</div><!-- .ourteam-box-container -->';
 		$re .= '</div><!-- .ourteam-box-thumbnail -->';
-	
+
+		$re .= '<div class="option-social">';
+			if(!empty($facebook))
+				$re .= '<a class="facebook" href="'.$facebook.'" target="_blank" ></a>';
+			if(!empty($twitter))
+				$re .= '<a class="twitter" href="'.$twitter.'" target="_blank" ></a>';
+			if(!empty($googleplus))
+				$re .= '<a class="googleplus" href="'.$googleplus.'" target="_blank" ></a>';
+		$re .= '</div> <!-- .option-social -->';
+
 		if(!empty($image))
 				$re .= '<div class="thumbnail-img-ourteam"><img src="'.$image.'" class="" alt="ourteam" draggable="false"></div>';
-		
+
 	$re .= '</figure>';
-	
+
 	return $re;
 }
 
-add_shortcode('brands', 'sh_brands'); 
+add_shortcode('brands', 'sh_brands');
 function sh_brands($attr, $content=null){
 	extract( shortcode_atts( array(
-		'columns' => 4 
+		'columns' => 4
 	), $attr ) );
 	$re = '';
-	
+
 	$aniclass = rb_get_extra_el_class($attr);
-	
+
 	$re .= '<section class="speacing-box">';
 	$contentArray = rb_sh2array($content);
 	$i = 0;
 	foreach($contentArray as $item){
 		if($item['shortcode']=='brands_item'){
-			
+
 			$i++;
 			$extra_class = ($i>$columns)?' not-first-row ':'';
 			$extra_class .= ($i%$columns==0)?' last-col ':'';
@@ -881,7 +881,7 @@ function sh_brands($attr, $content=null){
 				$re .= '<img src="'.$item['attr']['image'].'" alt="'.$alt.'">';
 			}
 			$re .= '</div>';
-			
+
 			if($i%$columns==0) // end row
 				$re .= '</div>';
 		}
@@ -889,16 +889,16 @@ function sh_brands($attr, $content=null){
 	$re .= '</section>';
 	return $re;
 }
-add_shortcode('brands_item', 'sh_return_empty'); 
+add_shortcode('brands_item', 'sh_return_empty');
 
-add_shortcode('score', 'sh_score'); 
+add_shortcode('score', 'sh_score');
 function sh_score($attr, $content=null){
 	extract( shortcode_atts( array(
 		'value' => '',
 		'title' => '',
 	), $attr ) );
 	$re = '';
-	
+
 	$re .= '<div class="about-score text-center">';
 	if(!empty($value))
 		$re .= '<h3>'.$value.'</h3>';
@@ -908,17 +908,17 @@ function sh_score($attr, $content=null){
 	return $re;
 }
 
-add_shortcode('twitter_feeds', 'sh_twitter_feeds'); 
+add_shortcode('twitter_feeds', 'sh_twitter_feeds');
 function sh_twitter_feeds($attr, $content=null){
 	extract( shortcode_atts( array(
 		'user' => '',
 		'limit' => 6,
 	), $attr ) );
 	$re = '';
-	
+
 	$re .= '<div class="twitter_feeds_el '.rb_get_extra_el_class($attr).'" '.rb_get_extra_el_attr($attr).' >';
 		$re .= '<div class="speacing-box text-center"><a href="#"><img class="border-white" src="'. get_template_directory_uri().'/images/social-icon/twitter.png" alt="social"></a></div>';
-	
+
 		$re .= '<div class="container text-center">';
 			$re .= '<div class="Owl-Slider-Twitter rb-twitter-feed" data-user="'.$user.'" data-limit="'.$limit.'">';
 			$re .= '</div>';
@@ -927,21 +927,21 @@ function sh_twitter_feeds($attr, $content=null){
 	return $re;
 }
 
-add_shortcode('flexslider', 'sh_flexslider'); 
+add_shortcode('flexslider', 'sh_flexslider');
 function sh_flexslider($attr, $content=null){
 	extract( shortcode_atts( array(
 		'id' => '',
 		'thumbnails' => 'true',
 	), $attr ) );
 	$re = '';
-	
+
 	$rb_gallery_post = get_post($id);
 	if($rb_gallery_post){
 		$cimg = '';
-		
+
 		$re .= '<div class="slider_flexslider">';
 		$re .= '<ul class="slides">';
-		
+
 		$rb_gallery_content = $rb_gallery_post->post_content;
 		$rb_gallery_array = rb_sh2array($rb_gallery_content);
 		if($rb_gallery_array[0]['shortcode']=='rb_gallery')
@@ -957,7 +957,7 @@ function sh_flexslider($attr, $content=null){
 					}elseif($attr['type']=='video'){
 						$video_type = rb_getMediaType($attr['url']);
 						$video_id = rb_getParamsFromUrl($attr['url']);
-						
+
 						if($video_type=='vimeo'){
 							$re .=  '<li>';
 							if($height==0)
@@ -975,7 +975,7 @@ function sh_flexslider($attr, $content=null){
 						}elseif($video_type=='embedplayer')
 							$re .= '<li>'.stripslashes($video_id).'</li>';
 					}
-					
+
 					// carousel images
 					$cimg .= '<li>';
 					$cimg .= '<img src="'.$attr['thumbnail'].'" >';
@@ -983,10 +983,10 @@ function sh_flexslider($attr, $content=null){
 				}
 			}
 		}
-				
+
 		$re .= '</ul>';
 		$re .= '</div>';
-		
+
 		if($thumbnails=='true'){
 			$re .= '<div class="carousel_flexslider">';
 			$re .= '<ul class="slides">';
@@ -995,7 +995,7 @@ function sh_flexslider($attr, $content=null){
 			$re .= '</div>';
 		}
 	}
-	
+
 	return $re;
 }
 
@@ -1004,24 +1004,24 @@ function sh_highlight2($attr, $content=null){
 	return '<span class="font-white">'.$content.'</span>';
 }
 
-add_shortcode('rainy', 'sh_rainy'); 
+add_shortcode('rainy', 'sh_rainy');
 function sh_rainy($attr, $content=null){
 	extract( shortcode_atts( array(
 		'image' => '',
 		'pattern' => 'true',
 	), $attr ) );
 	$re = '';
-	
+
 	if($pattern=='true')
 		$re .= '<div class="pattern-overlay1"></div>';
 	$re .= '<div class="rainy-wrapper">';
 	$re .= '<img class="rainy-background" src="" data-src="'.$image.'" />';
 	$re .= '</div>';
-	
+
 	return $re;
 }
 
-add_shortcode('video-parallax', 'sh_video_parallax'); 
+add_shortcode('video-parallax', 'sh_video_parallax');
 function sh_video_parallax($attr, $content=null){
 	extract( shortcode_atts( array(
 		'name' => '',
@@ -1034,7 +1034,7 @@ function sh_video_parallax($attr, $content=null){
 		'soundcontrol' => 'true',
 	), $attr ) );
 	$re = '';
-	
+
 	$re .= '<div class="video-parallax">';
 	$re .= '<div id="bgndVideo" class="player" data-property="{videoURL:\''.$video.'\', containment:\'body\', showControls:'.$showcontrols.', autoPlay:'.$autoplay.', loop:'.$loop.', mute:'.$mute.', startAt:0, opacity:1, addRaster:false, quality:\'default\'}">'.$name.'</div>';
 	$re .= '</div>';
@@ -1045,7 +1045,7 @@ function sh_video_parallax($attr, $content=null){
 	return $re;
 }
 
-add_shortcode('owl-slider', 'sh_owl_slider'); 
+add_shortcode('owl-slider', 'sh_owl_slider');
 function sh_owl_slider($attr, $content=null){
 	$re = '';
 	$re .= '<article class="Owl-Slider">';
@@ -1054,7 +1054,7 @@ function sh_owl_slider($attr, $content=null){
 	return $re;
 }
 
-add_shortcode('owl-item', 'sh_owl_item'); 
+add_shortcode('owl-item', 'sh_owl_item');
 function sh_owl_item($attr, $content=null){
 	extract( shortcode_atts( array(
 		'header' => '',
@@ -1068,23 +1068,23 @@ function sh_owl_item($attr, $content=null){
 	return $re;
 }
 
-add_shortcode('owl-item-button', 'sh_owl_item_button'); 
+add_shortcode('owl-item-button', 'sh_owl_item_button');
 function sh_owl_item_button($attr, $content=null){
 	extract( shortcode_atts( array(
 		'link' => '',
 		'target' => '',
 	), $attr ) );
-	
+
 	$link = (empty($link))?'javascript:void(0);':$link;
 	$target = (empty($target))?'_self':$target;
-	
+
 	$re = '';
 	$re = '<div class="box-speacing-type-min"><a href="'.$link.'" class="button-q">'.$content.'</a></div>';
 	return $re;
 }
 
 add_shortcode('vspace', 'sh_vspace');
-function sh_vspace($attr, $content = null){	
+function sh_vspace($attr, $content = null){
 		extract( shortcode_atts( array(
 		'height' => '20px',
 	), $attr ) );
@@ -1095,7 +1095,7 @@ function sh_vspace($attr, $content = null){
 remove_shortcode('gallery');
 add_shortcode('gallery', 'parse_gallery_shortcode');
 function parse_gallery_shortcode($atts) {
- 
+
     global $post;
 	$re = '';
     if ( ! empty( $atts['ids'] ) ) {
@@ -1104,7 +1104,7 @@ function parse_gallery_shortcode($atts) {
             $atts['orderby'] = 'post__in';
         $atts['include'] = $atts['ids'];
     }
- 
+
     extract(shortcode_atts(array(
         'orderby' => 'menu_order ASC, ID ASC',
         'include' => '',
@@ -1116,64 +1116,64 @@ function parse_gallery_shortcode($atts) {
         'size' => 'medium',
         'link' => 'file'
     ), $atts));
- 
- 
+
+
     $args = array(
         'post_type' => 'attachment',
         'post_status' => 'inherit',
         'post_mime_type' => 'image',
         'orderby' => $orderby
     );
- 
+
     if ( !empty($include) )
         $args['include'] = $include;
     else {
         $args['post_parent'] = $id;
         $args['numberposts'] = -1;
     }
- 
+
     $images = get_posts($args);
-    
+
 	$re .= '<div class="rb-wp-gallery" data-col-count="'.$columns.'">'; // begin gallery
 	$itemno = 0;
     foreach ( $images as $image ) {
         $caption = trim($image->post_excerpt);
- 
+
         $description = $image->post_content;
         if($description == '') $description = $image->post_title;
- 
+
         $image_alt = get_post_meta($image->ID,'_wp_attachment_image_alt', true);
-		$imgtag = wp_get_attachment_image($image->ID, $size, false, 
+		$imgtag = wp_get_attachment_image($image->ID, $size, false,
 			array(
-				'class'	=>"rb-wp-gallery-image img-responsive attachment-$size", 
+				'class'	=>"rb-wp-gallery-image img-responsive attachment-$size",
 				'alt'	=> trim(strip_tags( $image_alt ))
 			)
 		);
 		$imgtag = preg_replace( '/(width|height)=\"\d*\"\s/', "", $imgtag );
-        
+
 		$re .= '<div class="rb-wp-gallery-item-container">'; // begin col
-		
+
         $re .= "<{$itemtag} class='rb-wp-gallery-item'>";
         $re .= "<{$icontag} class='rb-wp-gallery-icon'>";
 			if($link=='file')
 				$re .= '<a href="'.get_attachment_link($image->ID).'" data-mfp-src="'.wp_get_attachment_url($image->ID).'" data-title="'.trim(strip_tags($caption)).'">';
 			$re .= $imgtag;
-			
+
 			if(!empty($caption))
 				$re .= "<{$captiontag} class='rb-wp-gallery-caption'>".$caption."</{$captiontag}>";
-			
+
 			if($link=='file')
 				$re .= '</a>';
-			
+
 		$re .= "</{$icontag}>";
 		$re .= "</{$itemtag}>";
-		
+
 		$re .= '</div>'; // end col;
-		
+
 		$itemno++;
     }
 	$re .= '</div>'; // end gallery
-	
+
 	return $re;
 }
 ?>
