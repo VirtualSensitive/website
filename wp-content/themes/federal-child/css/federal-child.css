@@ -22,6 +22,7 @@ html body .top-navigation {
   position: fixed;
   top: 0;
   width: 100%;
+  min-height: 75px;
   z-index: 990;
 }
 html body .top-navigation .top-navigation-inner .menu {
