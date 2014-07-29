@@ -70,14 +70,21 @@ global $Rb_demo;
 									$rb_header_socials .= '<a class="'.strtolower(str_replace(' ','',$rb_hSocial)).'" href="'.$rb_hSocial_link.'" target="_blank" ></a>';
 								}
 							}
-							if (!empty($rb_header_socials)) {
-								?>
-								<div id="header-share" class="right">
-									<?php echo $rb_header_socials; ?>
-								</div>
-							<?php
-							}
 							?>
+							<div class='right'>
+								<div id='header-lang' class='left'>
+									<?php do_action('icl_language_selector'); ?>
+								</div>
+								<?php
+								if (!empty($rb_header_socials)) {
+									?>
+									<div id='header-share' class='right'>
+										<?php echo $rb_header_socials; ?>
+									</div>
+									<?php
+								}
+								?>
+							</div>
 						</header>
 						<nav class="menu">
 							<a id='menu-toggle' href='#'>Menu</a>

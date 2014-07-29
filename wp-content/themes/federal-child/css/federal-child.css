@@ -5,6 +5,7 @@ html body p {
   margin: 0;
 }
 html body .site-logo,
+html body #header-lang,
 html body #header-share {
   height: 50px;
 }
@@ -19,6 +20,35 @@ html body #header-share a {
   margin: 10px 3px;
 }
 html body #header-share a:link, html body #header-share a:visited, html body #header-share a:hover, html body #header-share a:active {
+  margin: 10px 3px;
+}
+html body #header-lang #lang_sel_list {
+  min-height: 32px;
+  height: 100%;
+}
+html body #header-lang #lang_sel_list ul {
+  height: 100%;
+  *zoom: 1;
+}
+html body #header-lang #lang_sel_list ul:before, html body #header-lang #lang_sel_list ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+html body #header-lang #lang_sel_list ul:after {
+  clear: both;
+}
+html body #header-lang #lang_sel_list ul li {
+  height: 100%;
+}
+html body #header-lang #lang_sel_list ul li a {
+  width: 30px;
+  height: 30px;
+  margin: 10px 3px;
+  line-height: 30px;
+  text-align: center;
+}
+html body #header-lang #lang_sel_list ul li a:link, html body #header-lang #lang_sel_list ul li a:visited, html body #header-lang #lang_sel_list ul li a:hover, html body #header-lang #lang_sel_list ul li a:active {
   margin: 10px 3px;
 }
 html body .top-navigation {

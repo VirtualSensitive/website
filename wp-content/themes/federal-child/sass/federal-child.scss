@@ -28,6 +28,7 @@ html {
             margin: 0;
         }
         .site-logo,
+        #header-lang,
         #header-share {
             height: 50px;
         }
@@ -46,6 +47,32 @@ html {
                 &:hover,
                 &:active {
                     margin: 10px 3px;
+                }
+            }
+        }
+        #header-lang {
+            #lang_sel_list {
+                min-height: 32px;
+                height: 100%;
+                ul {
+                    height: 100%;
+                    @include clearfix();
+                    li {
+                        height: 100%;
+                        a {
+                            width: 30px;
+                            height: 30px;
+                            margin: 10px 3px;
+                            line-height: 30px;
+                            text-align: center;
+                            &:link,
+                            &:visited,
+                            &:hover,
+                            &:active {
+                                margin: 10px 3px;
+                            }
+                        }
+                    }
                 }
             }
         }
