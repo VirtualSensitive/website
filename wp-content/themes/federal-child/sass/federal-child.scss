@@ -24,6 +24,9 @@ $menu-background: $menu-blue;
 html {
     body {
         padding: 75px 0 0 0;
+        p {
+            margin: 0;
+        }
         .site-logo,
         #header-share {
             height: 50px;
