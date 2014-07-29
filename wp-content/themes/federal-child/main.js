@@ -11,7 +11,7 @@
             $menu.addClass('open');
             $(this).text('Close');
         }
-    })
+    });
 
 	$('#top_section').height($(window).height());
 

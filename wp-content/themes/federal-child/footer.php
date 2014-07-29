@@ -10,7 +10,7 @@ $rb_footer_image = get_option('footerImage', '');
 				<div class='left'>
 					<p>Copyright © VirtualSensitive 2014</p>
 				</div>
-				<div class='right'>
+				<div class='footer-links center'>
 					<?php
 					if (has_nav_menu('footermenu')) {
 						echo strip_tags(wp_nav_menu(array(
