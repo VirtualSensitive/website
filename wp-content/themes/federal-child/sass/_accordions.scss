@@ -17,9 +17,13 @@ html {
                                 position: relative;
                                 height: 40px;
                                 line-height: 40px;
+                                padding: 0 0 0 60px;
                                 &:before {
                                     content: "\f067";
                                     display: inline-block;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
                                     width: 40px;
                                     height: 40px;
                                     font-family: "Fontawesome";
