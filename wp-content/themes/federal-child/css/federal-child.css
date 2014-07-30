@@ -374,7 +374,6 @@ html body .left-accordion .panel-group .panel.panel-default .panel-heading .pane
 }
 html body .left-accordion .panel-group .panel.panel-default .panel-collapse .panel-body {
   padding: 0 60px 0 0;
-  direction: rtl;
 }
 html body .right-accordion .panel-group .panel.panel-default .panel-heading .panel-title a {
   padding: 0 0 0 60px;
@@ -386,7 +385,6 @@ html body .right-accordion .panel-group .panel.panel-default .panel-heading .pan
 }
 html body .right-accordion .panel-group .panel.panel-default .panel-collapse .panel-body {
   padding: 0 0 0 60px;
-  direction: ltr;
 }
 
 html body div .tp-caption {
