@@ -332,12 +332,17 @@ html body .panel-group .panel.panel-default .panel-heading .panel-title:before {
   content: "";
   display: none;
 }
+html body .panel-group .panel.panel-default .panel-heading .panel-title a {
+  display: block;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+}
 html body .panel-group .panel.panel-default .panel-heading .panel-title a:before {
   content: "\f067";
   display: inline-block;
   width: 40px;
   height: 40px;
-  margin-right: 20px;
   font-family: "Fontawesome";
   line-height: 40px;
   text-align: center;
@@ -351,9 +356,37 @@ html body .panel-group .panel.panel-default .panel-heading .panel-title a:before
 html body .panel-group .panel.panel-default .panel-heading:hover .panel-title a:before {
   background: #00b5e7;
 }
+html body .panel-group .panel.panel-default .panel-collapse .panel-body {
+  padding: 0;
+  text-align: justify;
+}
 html body .panel-group .panel.panel-default.active .panel-heading .panel-title a:before {
   content: "\f068";
   background: #00b5e7;
+}
+html body .left-accordion .panel-group .panel.panel-default .panel-heading .panel-title a {
+  padding: 0 60px 0 0;
+}
+html body .left-accordion .panel-group .panel.panel-default .panel-heading .panel-title a:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+html body .left-accordion .panel-group .panel.panel-default .panel-collapse .panel-body {
+  padding: 0 60px 0 0;
+  direction: rtl;
+}
+html body .right-accordion .panel-group .panel.panel-default .panel-heading .panel-title a {
+  padding: 0 0 0 60px;
+}
+html body .right-accordion .panel-group .panel.panel-default .panel-heading .panel-title a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+html body .right-accordion .panel-group .panel.panel-default .panel-collapse .panel-body {
+  padding: 0 0 0 60px;
+  direction: ltr;
 }
 
 html body div .tp-caption {

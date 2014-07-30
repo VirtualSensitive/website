@@ -1,4 +1,5 @@
 @import "bourbon/bourbon";
+@import "mixins";
 
 html {
     body {
@@ -12,12 +13,15 @@ html {
                                 display: none;
                             }
                             a {
+                                display: block;
+                                position: relative;
+                                height: 40px;
+                                line-height: 40px;
                                 &:before {
                                     content: "\f067";
                                     display: inline-block;
                                     width: 40px;
                                     height: 40px;
-                                    margin-right: 20px;
                                     font-family: "Fontawesome";
                                     line-height: 40px;
                                     text-align: center;
@@ -38,6 +42,12 @@ html {
                             }
                         }
                     }
+                    .panel-collapse {
+                        .panel-body {
+                            padding: 0;
+                            text-align: justify;
+                        }
+                    }
                     &.active {
                         .panel-heading {
                             .panel-title {
@@ -47,6 +57,58 @@ html {
                                         background: #00b5e7;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .left-accordion {
+            .panel-group {
+                .panel {
+                    &.panel-default {
+                        .panel-heading {
+                            .panel-title {
+                                a {
+                                    padding: 0 60px 0 0;
+                                    &:before {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .panel-collapse {
+                            .panel-body {
+                                padding: 0 60px 0 0;
+                                direction: rtl;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-accordion {
+            .panel-group {
+                .panel {
+                    &.panel-default {
+                        .panel-heading {
+                            .panel-title {
+                                a {
+                                    padding: 0 0 0 60px;
+                                    &:before {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .panel-collapse {
+                            .panel-body {
+                                padding: 0 0 0 60px;
+                                direction: ltr;
                             }
                         }
                     }
