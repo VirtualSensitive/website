@@ -248,9 +248,19 @@
 		setFlexSlider('body');
 		$('body').fitVids();
 
-		$('.body-loading').delay(1000).animate({opacity:0}, {duration:1000, easing:'easeOutQuart', complete:function(){
-			$(this).remove();
-		}});
+        var $bodyLoading = $('.body-loading');
+        if ($bodyLoading) {
+            $bodyLoading.delay(400).animate({
+                opacity: 0
+            }, {
+                duration: 1000,
+                easing: 'easeOutQuart',
+                complete: function () {
+                    $bodyLoading.remove();
+                }
+            });
+        }
+
 
 		setTimeout(function(){
 			if($(location.href.split("#")[1])) {
