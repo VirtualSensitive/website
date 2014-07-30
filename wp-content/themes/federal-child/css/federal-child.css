@@ -375,6 +375,7 @@ html body .left-accordion .panel-group .panel.panel-default .panel-heading .pane
   position: absolute;
   top: 0;
   right: 0;
+  left: initial;
 }
 html body .left-accordion .panel-group .panel.panel-default .panel-collapse .panel-body {
   padding: 0 60px 0 0;
@@ -386,6 +387,7 @@ html body .right-accordion .panel-group .panel.panel-default .panel-heading .pan
   position: absolute;
   top: 0;
   left: 0;
+  right: initial;
 }
 html body .right-accordion .panel-group .panel.panel-default .panel-collapse .panel-body {
   padding: 0 0 0 60px;
