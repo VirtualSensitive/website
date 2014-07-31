@@ -834,14 +834,14 @@ function sh_person($attr, $content=null){
 			$re .= '</div><!-- .ourteam-box-container -->';
 		$re .= '</div><!-- .ourteam-box-thumbnail -->';
 
-		$re .= '<div class="option-social">';
-			if(!empty($facebook))
-				$re .= '<a class="facebook" href="'.$facebook.'" target="_blank" ></a>';
-			if(!empty($twitter))
-				$re .= '<a class="twitter" href="'.$twitter.'" target="_blank" ></a>';
-			if(!empty($googleplus))
-				$re .= '<a class="googleplus" href="'.$googleplus.'" target="_blank" ></a>';
-		$re .= '</div> <!-- .option-social -->';
+		// $re .= '<div class="option-social">';
+		// 	if(!empty($facebook))
+		// 		$re .= '<a class="facebook" href="'.$facebook.'" target="_blank" ></a>';
+		// 	if(!empty($twitter))
+		// 		$re .= '<a class="twitter" href="'.$twitter.'" target="_blank" ></a>';
+		// 	if(!empty($googleplus))
+		// 		$re .= '<a class="googleplus" href="'.$googleplus.'" target="_blank" ></a>';
+		// $re .= '</div> <!-- .option-social -->';
 
 		if(!empty($image))
 				$re .= '<div class="thumbnail-img-ourteam"><img src="'.$image.'" class="" alt="ourteam" draggable="false"></div>';

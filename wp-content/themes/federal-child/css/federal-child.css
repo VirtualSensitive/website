@@ -387,6 +387,9 @@ html body .box-contact .form-contact input[type="submit"]:hover {
 html body .footer-wa-container .textwidget .pin-contact .label .fa {
   color: #00b5e7;
 }
+html body .footer-wa-container .textwidget .pin-contact .label:hover {
+  border-color: white;
+}
 html body .footer-wa-container .textwidget .pin-contact .label:hover .fa {
   color: white;
 }
