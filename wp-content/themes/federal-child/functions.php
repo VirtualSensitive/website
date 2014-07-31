@@ -68,6 +68,9 @@ function rb_theme_setup(){
 
 	add_filter('avatar_defaults','rb_custom_gravatar');
 
+	// Formulaire de contact
+	add_filter('wpcf7_form_class_attr', 'ContactFormClass');
+
 	// Galleries
 	add_action( 'init', 'rb_create_gallery_post_type' );
 	add_action('admin_menu', 'rb_add_gallery_manager_box');
@@ -87,6 +90,10 @@ function rb_theme_setup(){
 
 	// Body classes
 	add_filter('body_class', 'add_slug_body_class');
+}
+
+function ContactFormClass($class) {
+	return $class .= ' form-contact';
 }
 
 function GetCertainPostTypes($query){
