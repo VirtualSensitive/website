@@ -593,7 +593,7 @@ function sh_rb_page($attr, $content=null){
 				$re .= '<article class="sub-box">';
 				if($pattern=='true')
 					$re .= '<div class="pattern-overlay"></div>';
-				$re .= '<div class="around-white speacing-box container text-center effect-waypoint">
+				$re .= '<div class="around-white speacing-box container effect-waypoint">
 					'. $pageContent .'
 				</div>
 				</article>';
