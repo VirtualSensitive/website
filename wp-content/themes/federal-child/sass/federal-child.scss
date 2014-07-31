@@ -345,6 +345,22 @@ html {
                 }
             }
         }
+        .footer-wa-container {
+            .textwidget {
+                .pin-contact {
+                    .label {
+                        .fa {
+                            color: #00b5e7;
+                        }
+                        &:hover {
+                            .fa {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .footer-wrapper {
             position: relative;
             width: 100%;

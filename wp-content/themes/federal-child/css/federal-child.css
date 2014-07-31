@@ -384,6 +384,12 @@ html body .box-contact .form-contact input[type="submit"] {
 html body .box-contact .form-contact input[type="submit"]:hover {
   opacity: 1.0;
 }
+html body .footer-wa-container .textwidget .pin-contact .label .fa {
+  color: #00b5e7;
+}
+html body .footer-wa-container .textwidget .pin-contact .label:hover .fa {
+  color: white;
+}
 html body .footer-wrapper {
   position: relative;
   width: 100%;
