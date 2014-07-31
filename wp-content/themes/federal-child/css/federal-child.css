@@ -334,6 +334,12 @@ html body .box-contact .form-contact {
   max-width: 825px;
   margin: auto;
 }
+html body .box-contact .form-contact .speacing-box-mini span {
+  display: block !important;
+}
+html body .box-contact .form-contact .speacing-box-mini span.wpcf7-not-valid-tip {
+  color: #c23f3f;
+}
 html body .box-contact .form-contact input[type="text"],
 html body .box-contact .form-contact input[type="search"],
 html body .box-contact .form-contact input[type="email"],
@@ -342,7 +348,7 @@ html body .box-contact .form-contact input[type="range"],
 html body .box-contact .form-contact input[type="password"],
 html body .box-contact .form-contact input[type="date"],
 html body .box-contact .form-contact input[type="datetime"],
-html body .box-contact .form-contact input[type="datetime-local"],
+html body .box-contact .form-contact input[type="datetime-loca"],
 html body .box-contact .form-contact input[type="time"],
 html body .box-contact .form-contact input[type="month"],
 html body .box-contact .form-contact input[type="week"],

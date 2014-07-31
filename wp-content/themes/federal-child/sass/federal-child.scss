@@ -293,6 +293,14 @@ html {
             .form-contact {
                 max-width: 825px;
                 margin: auto;
+                .speacing-box-mini {
+                    span {
+                        display: block !important;
+                        &.wpcf7-not-valid-tip {
+                            color: #c23f3f;
+                        }
+                    }
+                }
                 input[type="text"],
                 input[type="search"],
                 input[type="email"],
@@ -301,7 +309,7 @@ html {
                 input[type="password"],
                 input[type="date"],
                 input[type="datetime"],
-                input[type="datetime-local"],
+                input[type="datetime-loca"],
                 input[type="time"],
                 input[type="month"],
                 input[type="week"],
