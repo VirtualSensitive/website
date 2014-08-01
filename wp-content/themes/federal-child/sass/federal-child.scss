@@ -31,6 +31,14 @@ html {
             background-repeat: repeat-y;
             @include background-size(100%);
         }
+        .pageSection {
+            margin: 0;
+            padding: 0;
+            .speacing-box {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
         .site-logo,
         #header-lang,
         #header-share {
@@ -267,10 +275,6 @@ html {
         }
         .block-content {
             margin-top: 50px;
-        }
-        .speacing-box {
-            padding-top: 50px;
-            padding-bottom: 40px;
         }
         .speacing-box-form-contact {
             padding-top: 50px !important;

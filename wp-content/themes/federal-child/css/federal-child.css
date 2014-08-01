@@ -8,6 +8,14 @@ html body .parallax-background {
   background-repeat: repeat-y;
   background-size: 100%;
 }
+html body .pageSection {
+  margin: 0;
+  padding: 0;
+}
+html body .pageSection .speacing-box {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 html body .site-logo,
 html body #header-lang,
 html body #header-share {
@@ -307,10 +315,6 @@ html body .speacing-box-element {
 }
 html body .block-content {
   margin-top: 50px;
-}
-html body .speacing-box {
-  padding-top: 50px;
-  padding-bottom: 40px;
 }
 html body .speacing-box-form-contact {
   padding-top: 50px !important;
