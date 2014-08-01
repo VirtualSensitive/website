@@ -4,6 +4,10 @@ html body {
 html body p {
   margin: 0;
 }
+html body .parallax-background {
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
 html body .site-logo,
 html body #header-lang,
 html body #header-share {

@@ -27,6 +27,10 @@ html {
         p {
             margin: 0;
         }
+        .parallax-background {
+            background-repeat: repeat-y;
+            @include background-size(100%);
+        }
         .site-logo,
         #header-lang,
         #header-share {
