@@ -75,6 +75,7 @@ html {
                             .panel-title {
                                 a {
                                     padding: 0 60px 0 0;
+                                    text-align: right;
                                     &:before {
                                         position: absolute;
                                         top: 0;
@@ -87,6 +88,7 @@ html {
                         .panel-collapse {
                             .panel-body {
                                 padding: 0 60px 0 0;
+                                text-align: right;
                             }
                         }
                     }
@@ -101,6 +103,7 @@ html {
                             .panel-title {
                                 a {
                                     padding: 0 0 0 60px;
+                                    text-align: left;
                                     &:before {
                                         position: absolute;
                                         top: 0;
@@ -113,6 +116,7 @@ html {
                         .panel-collapse {
                             .panel-body {
                                 padding: 0 0 0 60px;
+                                text-align: left;
                             }
                         }
                     }

@@ -492,6 +492,7 @@ html body .panel-group .panel.panel-default.active .panel-heading .panel-title a
 }
 html body .left-accordion .panel-group .panel.panel-default .panel-heading .panel-title a {
   padding: 0 60px 0 0;
+  text-align: right;
 }
 html body .left-accordion .panel-group .panel.panel-default .panel-heading .panel-title a:before {
   position: absolute;
@@ -501,9 +502,11 @@ html body .left-accordion .panel-group .panel.panel-default .panel-heading .pane
 }
 html body .left-accordion .panel-group .panel.panel-default .panel-collapse .panel-body {
   padding: 0 60px 0 0;
+  text-align: right;
 }
 html body .right-accordion .panel-group .panel.panel-default .panel-heading .panel-title a {
   padding: 0 0 0 60px;
+  text-align: left;
 }
 html body .right-accordion .panel-group .panel.panel-default .panel-heading .panel-title a:before {
   position: absolute;
@@ -513,6 +516,7 @@ html body .right-accordion .panel-group .panel.panel-default .panel-heading .pan
 }
 html body .right-accordion .panel-group .panel.panel-default .panel-collapse .panel-body {
   padding: 0 0 0 60px;
+  text-align: left;
 }
 
 html body .fixed-dots-anchors {
