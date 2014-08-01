@@ -4,6 +4,10 @@ html body {
 html body p {
   margin: 0;
 }
+html body .container {
+  width: 100% !important;
+  box-sizing: border-box;
+}
 html body .parallax-background {
   background-repeat: repeat-y;
   background-size: 100%;

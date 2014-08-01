@@ -27,6 +27,10 @@ html {
         p {
             margin: 0;
         }
+        .container {
+            width: 100% !important;
+            box-sizing: border-box;
+        }
         .parallax-background {
             background-repeat: repeat-y;
             @include background-size(100%);
