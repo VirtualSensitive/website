@@ -4,6 +4,9 @@ html body {
 html body p {
   margin: 0;
 }
+html body .body-wrapper {
+  padding: 0 0 40px 0;
+}
 html body .container {
   width: 100% !important;
   box-sizing: border-box;
