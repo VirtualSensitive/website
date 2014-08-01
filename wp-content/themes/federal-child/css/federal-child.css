@@ -457,7 +457,7 @@ html body .panel-group .panel.panel-default .panel-heading .panel-title:before {
 html body .panel-group .panel.panel-default .panel-heading .panel-title a {
   display: block;
   position: relative;
-  height: 40px;
+  min-height: 40px;
   line-height: 40px;
   padding: 0 0 0 60px;
 }
