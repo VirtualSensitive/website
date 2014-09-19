@@ -4,6 +4,17 @@ html body {
 html body p {
   margin: 0;
 }
+html body .clearfix {
+  *zoom: 1;
+}
+html body .clearfix:before, html body .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+html body .clearfix:after {
+  clear: both;
+}
 html body .body-wrapper {
   padding: 0 0 40px 0;
 }

@@ -27,6 +27,9 @@ html {
         p {
             margin: 0;
         }
+        .clearfix {
+            @include clearfix();
+        }
         .body-wrapper {
             padding: 0 0 40px 0;
         }
