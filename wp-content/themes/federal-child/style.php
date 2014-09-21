@@ -744,6 +744,9 @@ p,
 	color: <?php echo $rb_ColorFirst; ?> !important;
 }
 
+#header-client-link-container a:hover {
+	color:<?php echo $rb_ColorFirst; ?>;
+}
 #header-share{
 	margin-left:20px;
 }

@@ -61,21 +61,22 @@ global $Rb_demo;
 									<img src="<?php echo $rb_logoURL; ?>" alt="<?php bloginfo('name'); ?>" />
 								</a>
 							</div>
-							<?php
-							$rb_header_socials = '';
-							$rb_hSocials = array('Google', 'Twitter', 'Facebook');
-							foreach ($rb_hSocials as $rb_hSocial) {
-								$rb_hSocial_link = trim(get_option('headerSocial'.str_replace(' ','',$rb_hSocial), ''));
-								if (!empty($rb_hSocial_link)) {
-									$rb_header_socials .= '<a class="'.strtolower(str_replace(' ','',$rb_hSocial)).'" href="'.$rb_hSocial_link.'" target="_blank" ></a>';
-								}
-							}
-							?>
 							<div class='right'>
+								<div id='header-client-link-container' class='left'>
+									<a href='http://espaceclient.virtualsensitive.com/' target='_blank'><?php _e('Espace Client', 'vs'); ?></a>
+								</div>
 								<div id='header-lang' class='left'>
 									<?php do_action('icl_language_selector'); ?>
 								</div>
 								<?php
+								$rb_header_socials = '';
+								$rb_hSocials = array('Google', 'Twitter', 'Facebook');
+								foreach ($rb_hSocials as $rb_hSocial) {
+									$rb_hSocial_link = trim(get_option('headerSocial'.str_replace(' ','',$rb_hSocial), ''));
+									if (!empty($rb_hSocial_link)) {
+										$rb_header_socials .= '<a class="'.strtolower(str_replace(' ','',$rb_hSocial)).'" href="'.$rb_hSocial_link.'" target="_blank" ></a>';
+									}
+								}
 								if (!empty($rb_header_socials)) {
 									?>
 									<div id='header-share' class='right'>

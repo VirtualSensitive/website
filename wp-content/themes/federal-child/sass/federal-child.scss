@@ -73,6 +73,19 @@ html {
                 }
             }
         }
+        #header-client-link-container {
+            a {
+                display: inline-block;
+                width: 50px;
+                margin: 0 15px;
+                padding: 5px 0;
+                line-height: 20px;
+                text-align: center;
+                color: black;
+                font-size: 12px;
+                @include transition(color 0.3s ease-out);
+            }
+        }
         #header-lang {
             #lang_sel_list {
                 min-height: 32px;

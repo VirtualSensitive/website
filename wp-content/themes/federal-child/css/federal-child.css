@@ -53,6 +53,19 @@ html body #header-share a {
 html body #header-share a:link, html body #header-share a:visited, html body #header-share a:hover, html body #header-share a:active {
   margin: 10px 3px;
 }
+html body #header-client-link-container a {
+  display: inline-block;
+  width: 50px;
+  margin: 0 15px;
+  padding: 5px 0;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  font-size: 12px;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
 html body #header-lang #lang_sel_list {
   min-height: 32px;
   height: 100%;
