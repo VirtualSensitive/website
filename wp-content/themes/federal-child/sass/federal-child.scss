@@ -32,6 +32,9 @@ html {
         }
         .body-wrapper {
             padding: 0 0 40px 0;
+            @media (max-width: 767px) {
+                padding: 0;
+            }
         }
         .container {
             width: 100% !important;
@@ -433,6 +436,21 @@ html {
                 bottom: 0;
                 left: 0;
                 z-index: 999;
+            }
+            @media (max-width: 767px) {
+                text-align: center;
+                .footer-copyright {
+                    float: none;
+                    text-align: center;
+                }
+                .footer-links {
+                    display: inline-block;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: auto;
+                    @include transform(translate3d(0, 0, 0));
+                }
             }
         }
     }

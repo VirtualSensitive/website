@@ -18,6 +18,11 @@ html body .clearfix:after {
 html body .body-wrapper {
   padding: 0 0 40px 0;
 }
+@media (max-width: 767px) {
+  html body .body-wrapper {
+    padding: 0;
+  }
+}
 html body .container {
   width: 100% !important;
   box-sizing: border-box;
@@ -479,6 +484,27 @@ html body .footer-wrapper .footer-links {
     bottom: 0;
     left: 0;
     z-index: 999;
+  }
+}
+@media (max-width: 767px) {
+  html body .footer-wrapper {
+    text-align: center;
+  }
+  html body .footer-wrapper .footer-copyright {
+    float: none;
+    text-align: center;
+  }
+  html body .footer-wrapper .footer-links {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 

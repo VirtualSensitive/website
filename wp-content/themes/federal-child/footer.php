@@ -7,7 +7,7 @@ $rb_footer_image = get_option('footerImage', '');
 
 			<nav class='footer-wrapper'>
 				<div class='container'>
-					<div class='left'>
+					<div class='footer-copyright left'>
 						<p>Copyright © VirtualSensitive 2014</p>
 					</div>
 					<div class='footer-links center'>
